@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/all_champion.css' %}">
+</head>
+<body> 
+    <form method="" action="">
+        {% for item in tem %}
+        {{item.Name}}
+        {% endfor %}
+         <select name="teamselect">
+                {% for item in team %}
+                 <option value="{{item.TeamName}}">{{item.TeamName}}</option>
+                {% endfor %}
+        </select>
+        <input type="submit">
+    </form>
+    <div class="toptable">
+    
+        <div class="colum1">
+        <form method="GET" action ="">
+           <input name = "a" type ="text" class="search" type="text" placeholder="Tìm Tướng" >
+           <div class="input-group-append">
+           
+           </div>
+        </form>  
+        </div>
+        
+        <div class="colum2">
+           <div class="toc"> 
+               
+            <form name = "b" method ="GET" action = "">
+               <button class="btn btn--toc">Tộc</button>
+               <button name = "bScrap" type ="submit" class="img--class"><img class="a"src="https://rerollcdn.com/icons/scrap.png" alt=""></button>
+               <button name = "bYordle" type = "submit" class="img--class"><img class="a"src="https://rerollcdn.com/icons/yordle.png" alt=""></button>
+               <button name = "bSocialite" type = "submit" class="img--class"><img class="a"src="https://rerollcdn.com/icons/socialite.png" alt=""></button>
+               <button name = "bMutant" type ="submit" class="img--class"><img class="a"src="https://rerollcdn.com/icons/mutant.png" alt=""></button>
+               <button name = "bMercenary" type = "submit" class="img--class"><img class="a"src="https://rerollcdn.com/icons/mercenary.png" alt=""></button>
+               <button name = "bGlutton" type = "submit" class="img--class"><img class="a"src="https://rerollcdn.com/icons/glutton.png" alt=""></button>
+               <button name = "bHextech" type = "submit" class="img--class"><img class="a"src="https://rerollcdn.com/icons/hextech.png" alt=""></button>
+               <button name = "bDebonair" type = "submit" class="img--class"><img class="a"src="https://rerollcdn.com/icons/debonair.png" alt=""></button>
+               <button name = "cStriker" type = "submit" class="img--class"><img class="a"src="https://rerollcdn.com/icons/striker.png" alt=""></button>
+               <button name = "bClockwork" type = "submit" class="img--class"><img class="a"src="https://rerollcdn.com/icons/clockwork.png" alt=""></button>
+               <button name = "bEnforcer" type = "submit" class="img--class"><img class="a"src="https://rerollcdn.com/icons/enforcer.png" alt=""></button>
+               <button name = "bChemtech" type = "submit" class="img--class"><img class="a"src="https://rerollcdn.com/icons/chemtech.png"alt=""></button>
+               <button class="img--class"><img class="a"src="https://www.pngall.com/wp-content/uploads/5/Red-X-Letter-PNG-Free-Download.png" alt=""></button>
+            </form>
+           </div>
+           <div class="he">
+            <form name = "c" method = "GET" action = "">
+               <button class="btn btn--he">Hệ</button>
+               <button name = "cChallenger" type = "submit" class="img--class"><img class="a" src="https://rerollcdn.com/icons/challenger.png" alt=""></button>
+               <button name = "cEnchanter" type = "submit" class="img--class"><img class="a"src="https://rerollcdn.com/icons/enchanter.png" alt=""></button>
+               <button name = "cBodyguard" type = "submit" class="img--class"><img class="a"src="https://rerollcdn.com/icons/bodyguard.png" alt=""></button>
+               <button name = "bMastermind" type ="submit" class="img--class"><img class="a"src="https://rerollcdn.com/icons/mastermind.png" alt=""></button>
+               <button name = "cScholar" type = "submit" class="img--class"><img class="a"src="https://rerollcdn.com/icons/scholar.png" alt=""></button>
+               <button name = "cInnovator" type = "submit" class="img--class"><img class="a"src="https://rerollcdn.com/icons/innovator.png" alt=""></button>
+               <button name = "cTwinshot" type = "submit" class="img--class"><img class="a"src="https://rerollcdn.com/icons/twinshot.png" alt=""></button>
+               <button name = "cTransformer" type = "submit" class="img--class"><img class="a"src="https://rerollcdn.com/icons/transformer.png" alt=""></button>
+               <button name = "cBruiser" type = "submit" class="img--class"><img class="a"src="https://rerollcdn.com/icons/bruiser.png" alt=""></button>
+               <button name = "cAssassin" type = "submit" class="img--class"><img class="a"src="https://rerollcdn.com/icons/assassin.png" alt=""></button>
+               <button name = "cColossus" type = "submit" class="img--class"><img class="a"src="https://rerollcdn.com/icons/colossus.png" alt=""></button>
+               <button name = "cArcanist" type = "submit" class="img--class"><img class="a"src="https://rerollcdn.com/icons/arcanist.png" alt=""></button>
+               <button name = "cSniper" type = "submit" class="img--class"><img class="a"src="https://rerollcdn.com/icons/sniper.png" alt=""></button>
+               <button class="img--class"><img class="a"src="https://www.pngall.com/wp-content/uploads/5/Red-X-Letter-PNG-Free-Download.png" alt=""></button>
+            </form>
+           </div>
+        </div>
+    </div>
+
+    <div class="bottable">
+        <div class="list" style="display: flex; flex-wrap: wrap;">
+            {% for item in post %}
+                <form name ="d" method="GET" action="">
+                <div class="champ">
+                <button name ="iname" value ={{item.Name}} type = "submit" >
+                
+                    <img class="b" src="{{item.Image.url}}" alt="" >
+                    {{item.Name}}
+                </button>
+                </div>
+                </form>
+            {% endfor %}
+            
+        </div>
+    </div>
+</body>
+<footer>
+   Liên hệ quảng cáo: lmssplus.com@gmail.com
+   <br>
+   
+
+Copyright 2020 dtcl.gg. All rights reserved. <br>
+
+Dtcl.gg isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. 
+League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.
+
+
+</footer>
+</html>
