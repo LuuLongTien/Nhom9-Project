@@ -5,12 +5,12 @@ body{
 }
 
 .toptable{
-    background-color: #cfe6e7;
+    background-color: #2d2b56;
     display: flex;
     width: 1080px;
     height: 124px;
     color: white;
-    margin-top: 500px;
+   
     margin-left: 113px;
    justify-content: space-between;
     
@@ -25,43 +25,8 @@ body{
     border: 1px solid #7c69e3;
     border-radius: 5px;
 }
-.tien{
-    
-    background-color: #7c69e3;
-    width: 273px;
-    height: 34px;
-    margin-bottom: 20px ;
-    border-radius: 5px;
-    margin-left: 70px;
-    border: 1px solid #7c69e3;
-}
-.money{
-    width: 63px;
-    height: 35px;
-    background-color: #7c69e3; 
-    border-radius: 5px;
-    color: #fff;
-    border: 1px solid #7c69e3;
-    box-sizing: border-box;
-    cursor: pointer;
-   
-}
-.price{
-    color: #fff;
-    background-color: #2d2b56;
-    width: 31px;
-    height: 33px;
-    border: 1px solid #7c69e3;
-    outline: none;
-    cursor: pointer;
-    
-}
-.price--X{
-    border-radius: 5px;
-    border: 1px solid red;
-}
 .colum2{
-  text-align: center;
+    text-align: center;
     padding-right: 68px;
     margin-top: 20px;
 }
@@ -117,7 +82,7 @@ body{
 .bottable{
     height: 376px;
     width: 1080px;
-    background-color: #fff;
+    background-color: #3d0e96;
     margin-left: 113px;
     margin-right: 113px;
 }
@@ -167,7 +132,7 @@ footer{
     padding-top: 20px;
     padding-left: 20px;
     background-color: #13121e;
-  
+text-align: center;
     color: #fff;
     height: 165px;
 }

@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="{% static 'css/all_champion.css' %}">
+    <link rel="stylesheet" href="{% static './css/all_champion.css' %}">
 </head>
-<body> 
+<body > 
     
-    <div class="toptable">
+    <div class="toptable" style="margin-top:0%">
 
         <div class="colum1">
         <form method="GET" action ="">
@@ -63,12 +63,12 @@
         </div>
     </div>
 
-    <div class="bottable">
-        <div class="list" style="display: flex; flex-wrap: wrap;">
+    <div class="bottable" style="background-color: #292845;">
+        <div class="list" style="display: flex; flex-wrap: wrap; " style="background-color: #292845">
             {% for item in post %}
                 <form name ="d" method="GET" action="/app/search/info">
                 <div class="champ">
-                <button name ="xname" value ={{item.Name}} type = "submit" >
+                <button style="background-color: #292845; border:none; color:#fff" name ="xname" value ={{item.Name}} type = "submit" >
                 
                     <img class="b" src="{{item.Image.url}}" alt="" >
                     {{item.Name}}
@@ -80,12 +80,12 @@
         </div>
     </div>
 </body>
-<footer>
+<footer style="margin-top: 0%">
    Liên hệ quảng cáo: lmssplus.com@gmail.com
    <br>
    
 
-Copyright 2020 dtcl.gg. All rights reserved. <br>
+Copyright 2022dtcl.gg. All rights reserved. <br>
 
 Dtcl.gg isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. 
 League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.

@@ -73,12 +73,12 @@
         </div>
     </div>
 
-    <div class="bottable">
-        <div class="list" style="display: flex; flex-wrap: wrap;">
+    <div class="bottable "style="background-color: #292845;">
+        <div class="list" style="display: flex; flex-wrap: wrap;" >
             {% for item in post %}
                 <form name ="d" method="GET" action="">
                 <div class="champ">
-                <button name ="iname" value ={{item.Name}} type = "submit" >
+                <button style="background-color: #292845; border:none; color:#fff" name ="iname" value ={{item.Name}} type = "submit" >
                 
                     <img class="b" src="{{item.Image.url}}" alt="" >
                     {{item.Name}}
@@ -90,7 +90,7 @@
         </div>
     </div>
 </body>
-<footer>
+<footer style="margin-top: 0%">
    Liên hệ quảng cáo: lmssplus.com@gmail.com
    <br>
    
