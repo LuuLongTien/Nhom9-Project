@@ -1,0 +1,1345 @@
+{% extends "getchamp/base.html" %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base2.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap&subset=vietnamese" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'javascripts/all.min.js' %}">
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+</head>
+<body>
+    <div id="main">
+   
+
+    <div class="slider" style = ".slider {
+    padding-top: 40%;
+    background: url('/static/images/backgroundnew.jpg') top center / cover no-repeat;   
+}"></div>
+
+    <div class="content ">
+        <div class="content-box">
+            <div  style="margin: 0px 150px; padding-top: 35px;">
+            <span class="content-list-name test testjs">Hệ</span>
+            <span class="content-list-name test ">Tộc</span>
+            <!-- <div class="content-list"></div> -->
+            </div>
+
+        </div>
+            <div class="content-list"></div>
+
+
+        <!-- Tộc -->
+        <div class="grid__row grid__panes exit">
+            <div class="grid__col-50 content-heros">
+                <div class="content-heros-box">
+                    <img src="//rerollcdn.com/icons/challenger.png" alt="Thách đấu" class="content-heros-icon">
+                </div>                
+                <h3 class="content-heros-tribe">Thách đấu</h3>
+                <p class="content-heros-tribe-text">Tướng Thách Đấu nhận thêm Tốc Độ Đánh. Sau mỗi lần tham gia hạ gục, Tướng Thách Đấu lướt đến một mục tiêu mới và tăng gấp đôi lượng chỉ số này trong vài giây.</p>
+                <ul class="content-heros-tribe-menu">
+                    <div style="display: flex; margin-bottom: 4px; align-items: center"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(52, 46, 31);">2</div><li class="content-heros-tribe-menu-list">25% tôc độ đánh</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(111, 73, 57);">4</div><li class="content-heros-tribe-menu-list">50% tôc độ đánh</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(107, 107, 107);">6</div><li class="content-heros-tribe-menu-list">90% tôc độ đánh</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(162, 114, 8);">8</div><li class="content-heros-tribe-menu-list">150% tôc độ đánh</li></div>
+                </ul>
+
+                <div class="content-heros-tribe-members">
+                {% for item in thachdau %}
+                    {% if item.Money == 2 %}
+                    <div style="margin-right: 12px">
+                        <img src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 1 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: #707070;" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 5 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgb(255, 185, 59);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 3 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgba(0, 255, 0, 1);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 4 %}
+                     <div style="margin-right: 12px">
+                        <img style="border-color: rgb(0, 0, 255);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+                </div>
+            </div>
+
+            <!-- grid-2 -->
+            <div class="grid__col-50 content-heros">
+                <div class="content-heros-box">
+                    <img src="https://rerollcdn.com/icons/enchanter.png" alt="Thách đấu" class="content-heros-icon">
+                </div>                
+                <h3 class="content-heros-tribe">Thuật Sư</h3>
+                <p class="content-heros-tribe-text">Đội của bạn nhận thêm Kháng Phép. Thuật Sư nhận thêm giá trị hồi máu và lá chắn.</p>
+                <ul class="content-heros-tribe-menu">
+                    <div style="display: flex; margin-bottom: 4px; align-items: center"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(52, 46, 31);">2</div><li class="content-heros-tribe-menu-list">25 kháng phép, 25% hồi máu và lá chắn</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(111, 73, 57);">3</div><li class="content-heros-tribe-menu-list">40 kháng phép, 40% hồi máu và lá chắn</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(107, 107, 107);">4</div><li class="content-heros-tribe-menu-list">75 kháng phép, 75% hồi máu và lá chắn</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(162, 114, 8);">5</div><li class="content-heros-tribe-menu-list">100 kháng phép, 100% hồi máu và lá chắn</li></div>
+                </ul>
+
+                <div class="content-heros-tribe-members">
+                    {% for item in thuatsu %}
+                    {% if item.Money == 2 %}
+                    <div style="margin-right: 12px">
+                        <img src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 1 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: #707070;" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 5 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgb(255, 185, 59);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 3 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgba(0, 255, 0, 1);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 4 %}
+                     <div style="margin-right: 12px">
+                        <img style="border-color: rgb(0, 0, 255);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+            </div>
+                    <!-- grid-3 -->
+            <div class="grid__col-50 content-heros">
+                <div class="content-heros-box">
+                    <img src="	https://rerollcdn.com/icons/bodyguard.png" alt="Thách đấu" class="content-heros-icon">
+                </div>                
+                <h3 class="content-heros-tribe">Vệ Sĩ</h3>
+                <p class="content-heros-tribe-text">Vệ Sĩ được tăng Giáp. Sau khi trận chiến diễn ra một lúc, các Vệ Sĩ sẽ nhận một lá chắn và khiêu khích kẻ địch gần kề, buộc họ tấn công mình.</p>
+                <ul class="content-heros-tribe-menu">
+                    <div style="display: flex; margin-bottom: 4px; align-items: center"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(52, 46, 31);">2</div><li class="content-heros-tribe-menu-list">200</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(111, 73, 57);">4</div><li class="content-heros-tribe-menu-list">400</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(107, 107, 107);">6</div><li class="content-heros-tribe-menu-list">800</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(162, 114, 8);">8</div><li class="content-heros-tribe-menu-list">2000</li></div>
+                </ul>
+
+                <div class="content-heros-tribe-members">
+                    {% for item in vesi %}
+                    {% if item.Money == 2 %}
+                    <div style="margin-right: 12px">
+                        <img src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 1 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: #707070;" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 5 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgb(255, 185, 59);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 3 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgba(0, 255, 0, 1);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 4 %}
+                     <div style="margin-right: 12px">
+                        <img style="border-color: rgb(0, 0, 255);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+            </div>
+                    <!-- grid-4 -->
+            <div class="grid__col-50 content-heros">
+                <div class="content-heros-box">
+                    <img src="https://rerollcdn.com/icons/twinshot.png" alt="Thách đấu" class="content-heros-icon">
+                </div>                
+                <h3 class="content-heros-tribe">Liên Xạ</h3>
+                <p class="content-heros-tribe-text">Tướng Liên Xạ nhận thêm Sức Mạnh Công Kích và có tỉ lệ tấn công liên tục hai lần khi tung đòn đánh hoặc Kỹ Năng.</p>
+                <ul class="content-heros-tribe-menu">
+                    <div style="display: flex; margin-bottom: 4px; align-items: center"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(52, 46, 31);">2</div><li class="content-heros-tribe-menu-list">10 sức mạnh công kích, 40% cơ hội</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(111, 73, 57);">3</div><li class="content-heros-tribe-menu-list">25 sức mạnh công kích, 55% cơ hội</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(107, 107, 107);">4</div><li class="content-heros-tribe-menu-list">45 sức mạnh công kích, 70% cơ hội</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(162, 114, 8);">5</div><li class="content-heros-tribe-menu-list">80 sức mạnh công kích, 100% cơ hội</li></div>
+                </ul>
+
+                <div class="content-heros-tribe-members">
+                   {% for item in lienxa %}
+                    {% if item.Money == 2 %}
+                    <div style="margin-right: 12px">
+                        <img src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 1 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: #707070;" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 5 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgb(255, 185, 59);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 3 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgba(0, 255, 0, 1);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 4 %}
+                     <div style="margin-right: 12px">
+                        <img style="border-color: rgb(0, 0, 255);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+            </div>
+
+            <!-- grid-5 -->
+            <div class="grid__col-50 content-heros">
+                <div class="content-heros-box">
+                    <img src="https://rerollcdn.com/icons/assassin.png" alt="Thách đấu" class="content-heros-icon">
+                </div>                
+                <h3 class="content-heros-tribe">Sát Thủ</h3>
+                <p class="content-heros-tribe-text">Nội Tại: Khi giao tranh bắt đầu, Sát Thủ nhảy ra hàng sau kẻ địch.Kỹ năng của Sát Thủ có thể chí mạng, và họ nhận được thêm Tỉ Lệ Chí Mạng cùng Sát Thương Chí Mạng.</p>
+                <ul class="content-heros-tribe-menu">
+                    <div style="display: flex; margin-bottom: 4px; align-items: center"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(52, 46, 31);">2</div><li class="content-heros-tribe-menu-list">10% tỉ lệ chí mạng, 20% sát thương chí mạng</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(111, 73, 57);">4</div><li class="content-heros-tribe-menu-list">30% tỉ lệ chí mạng, 40% sát thương chí mạng</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(107, 107, 107);">6</div><li class="content-heros-tribe-menu-list">50% tỉ lệ chí mạng, 60% sát thương chí mạng</li></div>
+                </ul>
+
+                <div class="content-heros-tribe-members">
+                    {% for item in satthu %}
+                    {% if item.Money == 2 %}
+                    <div style="margin-right: 12px">
+                        <img src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 1 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: #707070;" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 5 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgb(255, 185, 59);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 3 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgba(0, 255, 0, 1);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 4 %}
+                     <div style="margin-right: 12px">
+                        <img style="border-color: rgb(0, 0, 255);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+            </div>
+
+            <!-- grid-6 -->
+            <div class="grid__col-50 content-heros">
+                <div class="content-heros-box">
+                    <img src="https://rerollcdn.com/icons/innovator.png" alt="Thách đấu" class="content-heros-icon">
+                </div>                
+                <h3 class="content-heros-tribe">Nhà Phát Minh</h3>
+                <p class="content-heros-tribe-text">Các Nhà Phát Minh tạo ra một đơn vị máy tham gia trận chiến cùng họ. Đơn Vị Máy nhận thêm Máu và Sức Mạnh Công Kích dựa trên cấp sao của các tướng Nhà Phát Minh.</p>
+                <ul class="content-heros-tribe-menu">
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(111, 73, 57);">3</div><li class="content-heros-tribe-menu-list">Bọ máy</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(107, 107, 107);">4</div><li class="content-heros-tribe-menu-list">gấu máy</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(162, 114, 8);">5</div><li class="content-heros-tribe-menu-list">Rồng máy</li></div>
+                </ul>
+
+                <div class="content-heros-tribe-members">
+                    {% for item in phatminh %}
+                    {% if item.Money == 2 %}
+                    <div style="margin-right: 12px">
+                        <img src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 1 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: #707070;" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 5 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgb(255, 185, 59);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 3 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgba(0, 255, 0, 1);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 4 %}
+                     <div style="margin-right: 12px">
+                        <img style="border-color: rgb(0, 0, 255);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                  {% endfor %}
+                    
+                </div>
+            </div>
+
+            <!-- grid-7 -->
+            <div class="grid__col-50 content-heros">
+                <div class="content-heros-box">
+                    <img src="https://rerollcdn.com/icons/arcanist.png" alt="Thách đấu" class="content-heros-icon">
+                </div>                
+                <h3 class="content-heros-tribe">Pháp sư</h3>
+                <p class="content-heros-tribe-text">Pháp Sư tăng Sức Mạnh Phép Thuật cho cả đội.</p>
+                <ul class="content-heros-tribe-menu">
+                    <div style="display: flex; margin-bottom: 4px; align-items: center"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(52, 46, 31);">2</div><li class="content-heros-tribe-menu-list">Cả đội nhận 20% sức mạnh phép thuật</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(111, 73, 57);">3</div><li class="content-heros-tribe-menu-list">Cả đội nhận 20% sức mạnh phép thuật, tướng pháp sư nhận thêm 40% sức mạnh phép thuật</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(107, 107, 107);">4</div><li class="content-heros-tribe-menu-list">Cả đội nhận thêm 50% sức mạnh phép thuật, tướng pháp sư nhận thêm 50%</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(162, 114, 8);">5</div><li class="content-heros-tribe-menu-list">Cả đội nhận 145% sức mạnh phép thuật</li></div>
+                </ul>
+
+                <div class="content-heros-tribe-members">
+                     {% for item in phapsu %}
+                    {% if item.Money == 2 %}
+                    <div style="margin-right: 12px">
+                        <img src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 1 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: #707070;" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 5 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgb(255, 185, 59);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 3 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgba(0, 255, 0, 1);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 4 %}
+                     <div style="margin-right: 12px">
+                        <img style="border-color: rgb(0, 0, 255);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                  {% endfor %}
+                    
+                </div>
+            </div>
+
+            <!-- grid-8 -->
+            <div class="grid__col-50 content-heros">
+                <div class="content-heros-box">
+                    <img src="https://rerollcdn.com/icons/sniper.png" alt="Thách đấu" class="content-heros-icon">
+                </div>                
+                <h3 class="content-heros-tribe">Xạ thủ</h3>
+                <p class="content-heros-tribe-text">Nội Tại: Xạ Thủ được tăng Tầm Đánh. Xạ Thủ gây sát thương thêm dựa trên mỗi ô khoảng cách giữa bản thân và mục tiêu.</p>
+                <ul class="content-heros-tribe-menu">
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(111, 73, 57);">2</div><li class="content-heros-tribe-menu-list">Nhận thêm 8% sát thương</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(107, 107, 107);">4</div><li class="content-heros-tribe-menu-list">nhận thêm 16% sát thương</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(162, 114, 8);">6</div><li class="content-heros-tribe-menu-list">nhận thêm 30% sát thương</li></div>
+                </ul>
+
+                <div class="content-heros-tribe-members">
+                      {% for item in xathu %}
+                    {% if item.Money == 2 %}
+                    <div style="margin-right: 12px">
+                        <img src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 1 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: #707070;" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 5 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgb(255, 185, 59);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 3 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgba(0, 255, 0, 1);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 4 %}
+                     <div style="margin-right: 12px">
+                        <img style="border-color: rgb(0, 0, 255);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                  {% endfor %}
+                    
+                </div>
+            </div>
+
+            <!-- grid-9 -->
+            <div class="grid__col-50 content-heros">
+                <div class="content-heros-box">
+                    <img src="https://rerollcdn.com/icons/transformer.png" alt="Thách đấu" class="content-heros-icon">
+                </div>                
+                <h3 class="content-heros-tribe">Chuyển Dạng</h3>
+                <p class="content-heros-tribe-text">Jayce chuyển dạng búa cận chiến khi được xếp ở 2 hàng đầu, và chuyển dạng pháo đánh xa khi được xếp ở 2 hàng sau.</p>
+                <ul class="content-heros-tribe-menu">
+                    <div style="display: flex; margin-bottom: 4px; align-items: center"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(52, 46, 31);">1</div><li class="content-heros-tribe-menu-list">Jayce chuyển dạng búa cận chiến khi được xếp ở 2 hàng đầu, và chuyển dạng pháo đánh xa khi được xếp ở 2 hàng sau.</li></div>
+                    
+                </ul>
+
+                <div class="content-heros-tribe-members">
+                     {% for item in chuyendang %}
+                    {% if item.Money == 2 %}
+                    <div style="margin-right: 12px">
+                        <img src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 1 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: #707070;" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 5 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgb(255, 185, 59);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 3 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgba(0, 255, 0, 1);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 4 %}
+                     <div style="margin-right: 12px">
+                        <img style="border-color: rgb(0, 0, 255);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+            </div>
+            
+            <div class="grid__col-50 content-heros">
+                <div class="content-heros-box">
+                    <img src="https://rerollcdn.com/icons/bruiser.png" alt="Thách đấu" class="content-heros-icon">
+                </div>                
+                <h3 class="content-heros-tribe">Đấu sĩ</h3>
+                <p class="content-heros-tribe-text">Cả đội nhận thêm Máu tối đa. Tướng Đấu Sĩ nhận gấp đôi lượng máu đó.</p>
+                <ul class="content-heros-tribe-menu">
+ <div style="display: flex; margin-bottom: 4px; align-items: center"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(52, 46, 31);">2</div><li class="content-heros-tribe-menu-list">125 máu</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(111, 73, 57);">4</div><li class="content-heros-tribe-menu-list">225 máu</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(107, 107, 107);">6</div><li class="content-heros-tribe-menu-list">450 máu</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(162, 114, 8);">8</div><li class="content-heros-tribe-menu-list">800 máu</li></div>
+                </ul>
+
+                <div class="content-heros-tribe-members">
+                     {% for item in dausi %}
+                    {% if item.Money == 2 %}
+                    <div style="margin-right: 12px">
+                        <img src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 1 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: #707070;" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 5 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgb(255, 185, 59);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 3 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgba(0, 255, 0, 1);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 4 %}
+                     <div style="margin-right: 12px">
+                        <img style="border-color: rgb(0, 0, 255);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+            </div>
+
+
+            <div class="grid__col-50 content-heros">
+                <div class="content-heros-box">
+                    <img src="https://rerollcdn.com/icons/scholar.png" alt="Thách đấu" class="content-heros-icon">
+                </div>                
+                <h3 class="content-heros-tribe">Học giả</h3>
+                <p class="content-heros-tribe-text">Đội bạn nhận thêm Năng Lượng mỗi giây.</p>
+                <ul class="content-heros-tribe-menu">
+                    <div style="display: flex; margin-bottom: 4px; align-items: center"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(52, 46, 31);">2</div><li class="content-heros-tribe-menu-list">5 mana</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(111, 73, 57);">4</div><li class="content-heros-tribe-menu-list">12 mana</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(107, 107, 107);">6</div><li class="content-heros-tribe-menu-list">25 mana</li></div>
+                    
+                </ul>
+
+                <div class="content-heros-tribe-members">
+                     {% for item in hocgia %}
+                    {% if item.Money == 2 %}
+                    <div style="margin-right: 12px">
+                        <img src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 1 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: #707070;" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 5 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgb(255, 185, 59);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 3 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgba(0, 255, 0, 1);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 4 %}
+                     <div style="margin-right: 12px">
+                        <img style="border-color: rgb(0, 0, 255);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                  {% endfor %}
+                    
+                </div>
+            </div>
+
+
+             <div class="grid__col-50 content-heros">
+                <div class="content-heros-box">
+                    <img src="https://rerollcdn.com/icons/colossus.png" alt="Thách đấu" class="content-heros-icon">
+                </div>                
+                <h3 class="content-heros-tribe">Khổng lồ</h3>
+                <p class="content-heros-tribe-text">Tướng Khổng Lồ to lớn và mạnh mẽ hơn. Họ đồng thời nhận % Máu cộng thêm và được miễn nhiễm hiệu ứng khống chế. Dù vậy, các tướng Khổng Lồ sẽ chiếm 2 vị trí trong đội hình.</p>
+                <ul class="content-heros-tribe-menu">
+                    <div style="display: flex; margin-bottom: 4px; align-items: center"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(52, 46, 31);">2</div><li class="content-heros-tribe-menu-list">Tướng khổng lồ giảm 25% sát thương nhận vào</li></div>
+                   
+                </ul>
+
+                <div class="content-heros-tribe-members">
+                     {% for item in khonglo %}
+                    {% if item.Money == 2 %}
+                    <div style="margin-right: 12px">
+                        <img src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 1 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: #707070;" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 5 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgb(255, 185, 59);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 3 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgba(0, 255, 0, 1);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 4 %}
+                     <div style="margin-right: 12px">
+                        <img style="border-color: rgb(0, 0, 255);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                  {% endfor %}
+                    
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Hệ -->
+        <div class="grid__row grid__panes ">
+            <!-- grid-1 -->
+            <div class="grid__col-50 content-heros">
+                <div class="content-heros-box">
+                    <img src="https://rerollcdn.com/icons/rivals.png" alt="Thách đấu" class="content-heros-icon">
+                </div>                
+                <h3 class="content-heros-tribe">Đối Thủ</h3>
+                <p class="content-heros-tribe-text">Hệ chỉ được kích hoạt khi không có Vi và Jinx trong cùng đội hình Năng lượng tiêu hao của Vi giảm 20. Jinx nhận 40% Tốc độ Đánh trong 3 giây sau khi hạ gục.</p>
+                <ul class="content-heros-tribe-menu">
+                    <div style="display: flex; margin-bottom: 4px; align-items: center"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(52, 46, 31);">1</div><li class="content-heros-tribe-menu-list">desc</li></div>
+                    
+                </ul>
+
+                <div class="content-heros-tribe-members">
+                       {% for item in doithu %}
+                    {% if item.Money == 2 %}
+                    <div style="margin-right: 12px">
+                        <img src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 1 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: #707070;" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 5 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgb(255, 185, 59);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 3 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgba(0, 255, 0, 1);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 4 %}
+                     <div style="margin-right: 12px">
+                        <img style="border-color: rgb(0, 0, 255);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+            </div>
+            <!-- grid-2 -->
+            <div class="grid__col-50 content-heros">
+                <div class="content-heros-box">
+                    <img src="https://rerollcdn.com/icons/scrap.png" alt="Thách đấu" class="content-heros-icon">
+                </div>                
+                <h3 class="content-heros-tribe">Tái chế</h3>
+                <p class="content-heros-tribe-text">Khi bắt đầu giao tranh, các trang bị thành phần của các tướng Tái Chế sẽ trở thành trang bị hoàn chỉnh trong trận chiến đó. Đội bạn cũng nhận được lá chắn cho mỗi trang bị thành phần được trang bị trong đội hình, bao gồm cả những trang bị được ghép thành hoàn chỉnh.</p>
+                <ul class="content-heros-tribe-menu">
+                      <div style="display: flex; margin-bottom: 4px; align-items: center"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(52, 46, 31);">2</div><li class="content-heros-tribe-menu-list">1 trang bị thành phần, 20 lá chắn</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(111, 73, 57);">4</div><li class="content-heros-tribe-menu-list">3 trang bị thành phần, 40 lá chắn</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(107, 107, 107);">6</div><li class="content-heros-tribe-menu-list">tất cả trang bị thành phần, 60 lá chắn</li></div>
+                </ul>
+
+                <div class="content-heros-tribe-members">
+                         {% for item in taiche %}
+                    {% if item.Money == 2 %}
+                    <div style="margin-right: 12px">
+                        <img src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 1 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: #707070;" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 5 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgb(255, 185, 59);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 3 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgba(0, 255, 0, 1);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 4 %}
+                     <div style="margin-right: 12px">
+                        <img style="border-color: rgb(0, 0, 255);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+            </div>
+            <!-- grid-3 -->
+            <div class="grid__col-50 content-heros">
+                <div class="content-heros-box">
+                    <img src="https://rerollcdn.com/icons/syndicate.png" alt="Thách đấu" class="content-heros-icon">
+                </div>                
+                <h3 class="content-heros-tribe">Băng đảng</h3>
+                <p class="content-heros-tribe-text">Đồng minh được che phủ trong bóng tối, nhận được 50 Giáp, 50 Kháng phép và 20% hút máu phép (hồi máu theo tỷ lệ phần trăm của tất cả các sát thương gây ra.)
+</p>
+                <ul class="content-heros-tribe-menu">
+                    <div style="display: flex; margin-bottom: 4px; align-items: center"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(52, 46, 31);">3</div><li class="content-heros-tribe-menu-list">Tướng băng đảng có phần trăm máu thấp nhất</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(111, 73, 57);">5</div><li class="content-heros-tribe-menu-list">Toàn bộ tướng băng đảng</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(107, 107, 107);">7</div><li class="content-heros-tribe-menu-list">Toàn bộ đội hình, hiệu ứng được thêm 60%</li></div>
+                </ul>
+
+                <div class="content-heros-tribe-members">
+                        {% for item in bangdang %}
+                    {% if item.Money == 2 %}
+                    <div style="margin-right: 12px">
+                        <img src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 1 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: #707070;" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 5 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgb(255, 185, 59);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 3 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgba(0, 255, 0, 1);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 4 %}
+                     <div style="margin-right: 12px">
+                        <img style="border-color: rgb(0, 0, 255);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+            </div>
+            <!-- grid-4 -->
+            <div class="grid__col-50 content-heros">
+                <div class="content-heros-box">
+                    <img src="https://rerollcdn.com/icons/yordle.png" alt="Thách đấu" class="content-heros-icon">
+                </div>                
+                <h3 class="content-heros-tribe">Yordle</h3>
+                <p class="content-heros-tribe-text">Sau mỗi trận chiến, một tướng Yordle ngẫu nhiên sẽ được thêm vào hàng chờ một cách miễn phí. Kỹ năng của Yordle tiêu hao ít năng lượng hơn.</p>
+                <ul class="content-heros-tribe-menu">
+                      <div style="display: flex; margin-bottom: 4px; align-items: center"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(52, 46, 31);">3</div><li class="content-heros-tribe-menu-list">Sau mỗi trận chiến 1 tướng Yordle ngẫu nhiên được thêm vào hàng chờm</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(111, 73, 57);">6</div><li class="content-heros-tribe-menu-list">Tướng Yordle tiêu hao ít hơn 30% năng lượng</li></div>
+                </ul>
+
+                <div class="content-heros-tribe-members">
+                          {% for item in yordle %}
+                    {% if item.Money == 2 %}
+                    <div style="margin-right: 12px">
+                        <img src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 1 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: #707070;" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 5 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgb(255, 185, 59);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 3 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgba(0, 255, 0, 1);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 4 %}
+                     <div style="margin-right: 12px">
+                        <img style="border-color: rgb(0, 0, 255);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+            </div>
+            <!-- grid-5 -->
+            <div class="grid__col-50 content-heros">
+                <div class="content-heros-box">
+                    <img src="https://rerollcdn.com/icons/yordle.png" alt="Thách đấu" class="content-heros-icon">
+                </div>                
+                <h3 class="content-heros-tribe">Trùm Yordle</h3>
+                <p class="content-heros-tribe-text">Veigar sẽ được hiệu triệu từ Cổng Yordle khi tất cả Yordle đều đạt 3 sao.</p>
+                <ul class="content-heros-tribe-menu">
+                      <div style="display: flex; margin-bottom: 4px; align-items: center"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(52, 46, 31);">1</div><li class="content-heros-tribe-menu-list">desc</li></div>
+
+                </ul>
+
+                <div class="content-heros-tribe-members">
+                          {% for item in trumyordle %}
+                    {% if item.Money == 2 %}
+                    <div style="margin-right: 12px">
+                        <img src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 1 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: #707070;" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 5 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgb(255, 185, 59);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 3 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgba(0, 255, 0, 1);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 4 %}
+                     <div style="margin-right: 12px">
+                        <img style="border-color: rgb(0, 0, 255);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+            </div>
+
+            <div class="grid__col-50 content-heros">
+                <div class="content-heros-box">
+                    <img src="https://rerollcdn.com/icons/socialite.png" alt="Thách đấu" class="content-heros-icon">
+                </div>                
+                <h3 class="content-heros-tribe">Thần tượng</h3>
+                <p class="content-heros-tribe-text">Thần Tượng tạo ra một hào quang trên sân đấu. Đơn vị đứng trên hào quang ở đầu trận đấu nhận thêm hiệu ứng.</p>
+                <ul class="content-heros-tribe-menu">
+                        <div style="display: flex; margin-bottom: 4px; align-items: center"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(52, 46, 31);">1</div><li class="content-heros-tribe-menu-list">Gây thêm 15% sát thương</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(111, 73, 57);">2</div><li class="content-heros-tribe-menu-list">Hồi 4 mana mỗi giây</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(107, 107, 107);">3</div><li class="content-heros-tribe-menu-list">Hồi máu bằng 33% sát thương gây ra</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(162, 114, 8);">5</div><li class="content-heros-tribe-menu-list">Tất cả hiệu ứng được nhân đôi</li></div>
+                </ul>
+
+                <div class="content-heros-tribe-members">
+                          {% for item in thantuong %}
+                    {% if item.Money == 2 %}
+                    <div style="margin-right: 12px">
+                        <img src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 1 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: #707070;" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 5 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgb(255, 185, 59);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 3 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgba(0, 255, 0, 1);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 4 %}
+                     <div style="margin-right: 12px">
+                        <img style="border-color: rgb(0, 0, 255);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+            </div>
+
+
+             <div class="grid__col-50 content-heros">
+                <div class="content-heros-box">
+                    <img src="https://rerollcdn.com/icons/mutant.png" alt="Thách đấu" class="content-heros-icon">
+                </div>                
+                <h3 class="content-heros-tribe">Đột biến</h3>
+                <p class="content-heros-tribe-text">Hiệu ứng Đột Biến thay đổi ngẫu nhiên ở từng trận đấu.</p>
+                <ul class="content-heros-tribe-menu">
+                        <div style="display: flex; margin-bottom: 4px; align-items: center"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(52, 46, 31);">3</div><li class="content-heros-tribe-menu-list">
+                         - Kết liễu mục tiêu dưới 20% máu - Nhận thêm 30% hút máu phép
+                          - Nhận thêm 20 sát thương với mỗi đồng minh nằm xuống - Giảm 20 mana - Có 40% cơ hội tấn công 2 lần - Nhận thêm 450 máu và 30 sức mạnh công kích với mỗi tướng đột biến có ít nhất 1 trang bị - Mạnh hơn mỗi 2 giây, nhận thêm 18 giáp và kháng phép, 2 sức mạnh công kích và sức mạnh phép thuật. Hiệu ứng cộng dồn 5 lần</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(111, 73, 57);">5</div><li class="content-heros-tribe-menu-list">Kết liễu mục tiêu dưới 20% máu, gây thêm 40% sát thương chuẩn - Nhận thêm 55% hút máu phép - Nhận thêm 30 sát thương với mỗi đồng minh nằm xuống
+                     - Giảm 40 mana 
+                     - Có 75% cơ hội tấn công 2 lần - Nhận thêm 900 máu và 60 sức mạnh công kích với mỗi tướng đột biến có ít nhất 1 trang bị 
+                     - Mạnh hơn mỗi 2 giây, nhận thêm 25 giáp và kháng phép, 4 sức mạnh công kích và sức mạnh phép thuật. Hiệu ứng cộng dồn 5 lần</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(107, 107, 107);">7</div><li class="content-heros-tribe-menu-list">- Kết liễu mục tiêu dưới 20% máu và gây thêm 80% sát thương 
+                    - Nhận thêm 80% hút máu phép - Nhận thêm 40 sát thương với mỗi đồng minh nằm xuống - Giảm 40 mana, cộng thêm 50 sức mạnh phép thuật 
+                    - Có 100% cơ hội tấn công 2 lần, nhận 40 sức mạnh công kích - Nhận thêm 1500 máu và 100 sức mạnh công kích với mỗi tướng đột biến có ít nhất 1 trang bị 
+                    - Mạnh hơn mỗi 2 giây, nhận thêm 35 giáp và kháng phép, 7 sức mạnh công kích và sức mạnh phép thuật. Hiệu ứng cộng dồn 5 lần</li></div>
+                </ul>
+
+                <div class="content-heros-tribe-members">
+                          {% for item in dotbien %}
+                    {% if item.Money == 2 %}
+                    <div style="margin-right: 12px">
+                        <img src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 1 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: #707070;" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 5 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgb(255, 185, 59);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 3 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgba(0, 255, 0, 1);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 4 %}
+                     <div style="margin-right: 12px">
+                        <img style="border-color: rgb(0, 0, 255);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+            </div>
+
+
+            <div class="grid__col-50 content-heros">
+                <div class="content-heros-box">
+                    <img src="https://rerollcdn.com/icons/mercenary.png" alt="Thách đấu" class="content-heros-icon">
+                </div>                
+                <h3 class="content-heros-tribe">Ngoại binh</h3>
+                <p class="content-heros-tribe-text">Nhận một rương chiến lợi phẩm sẽ mở ra khi chiến thắng một vòng đấu với người chơi. Ở đầu giai đoạn dàn trận với người chơi, lắc xúc xắc để thêm vật phẩm vào trong rương. Càng lâu không mở, xúc xắc sẽ càng may mắn.</p>
+                <ul class="content-heros-tribe-menu">
+                        <div style="display: flex; margin-bottom: 4px; align-items: center"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(52, 46, 31);">3</div><li class="content-heros-tribe-menu-list">Lắc 2 xúc xắc</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(111, 73, 57);">5</div><li class="content-heros-tribe-menu-list">Vật phẩm sẽ may mắn hơn</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(107, 107, 107);">7</div><li class="content-heros-tribe-menu-list">Sau mỗi chiến thắng, nhận thêm 1 vật phẩm ngẫu nhiên</li></div>
+                </ul>
+
+                <div class="content-heros-tribe-members">
+                          {% for item in ngoaibinh %}
+                    {% if item.Money == 2 %}
+                    <div style="margin-right: 12px">
+                        <img src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 1 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: #707070;" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 5 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgb(255, 185, 59);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 3 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgba(0, 255, 0, 1);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 4 %}
+                     <div style="margin-right: 12px">
+                        <img style="border-color: rgb(0, 0, 255);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+            </div>
+
+
+            <div class="grid__col-50 content-heros">
+                <div class="content-heros-box">
+                    <img src="https://rerollcdn.com/icons/glutton.png" alt="Thách đấu" class="content-heros-icon">
+                </div>                
+                <h3 class="content-heros-tribe">Phàm ăn</h3>
+                <p class="content-heros-tribe-text">Một đồng minh từ hàng chờ có thể được cho Tahm Kench ăn một lần trong giai đoạn dàn trận mỗi vòng đấu, cho hắn thêm một trong các chỉ số gồm Sức Mạnh Phép Thuật, Máu, Giáp, hoặc Kháng Phép.Để cho ăn, đưa con mồi từ hàng chờ dự bị vào miệng Tahm Kench, đợi hắn mở miệng ra và thả chuột.</p>
+                <ul class="content-heros-tribe-menu">
+                        <div style="display: flex; margin-bottom: 4px; align-items: center"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(52, 46, 31);">1</div><li class="content-heros-tribe-menu-list">desc</li></div>
+                    
+                </ul>
+
+                <div class="content-heros-tribe-members">
+                          {% for item in phaman %}
+                    {% if item.Money == 2 %}
+                    <div style="margin-right: 12px">
+                        <img src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 1 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: #707070;" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 5 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgb(255, 185, 59);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 3 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgba(0, 255, 0, 1);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 4 %}
+                     <div style="margin-right: 12px">
+                        <img style="border-color: rgb(0, 0, 255);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+            </div>
+
+
+             <div class="grid__col-50 content-heros">
+                <div class="content-heros-box">
+                    <img src="https://rerollcdn.com/icons/hextech.png" alt="Thách đấu" class="content-heros-icon">
+                </div>                
+                <h3 class="content-heros-tribe">Công nghệ</h3>
+                <p class="content-heros-tribe-text">Khi trận chiến bắt đầu sau mỗi giây sau đó, Lõi Công Nghệ sẽ phát ra một xung điện, tạo cho các tướng Công Nghệ Đồng Minh một lá chắn trong vài giây. Khi lá chắn được kích hoạt, đòn đánh của chủ sở hữu gây thêm sát thương phép. Sức mạnh sẽ tăng theo số nâng cấp trong Lõi công nghệ ( Mỗi lõi 20% ). Lá chắn không cộng dồn.</p>
+                <ul class="content-heros-tribe-menu">
+                      <div style="display: flex; margin-bottom: 4px; align-items: center"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(52, 46, 31);">2</div><li class="content-heros-tribe-menu-list">100 lá chắn, 15 sức mạnh phép thuật</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(111, 73, 57);">4</div><li class="content-heros-tribe-menu-list">150 lá chắn, 25 sức mạnh phép thuật</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(107, 107, 107);">6</div><li class="content-heros-tribe-menu-list">300 lá chắn, 50 sức mạnh phép thuật</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(162, 114, 8);">8</div><li class="content-heros-tribe-menu-list">400 lá chắn, 80 sức mạnh phép thuật</li></div>
+                </ul>
+
+                <div class="content-heros-tribe-members">
+                          {% for item in congnghe %}
+                    {% if item.Money == 2 %}
+                    <div style="margin-right: 12px">
+                        <img src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 1 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: #707070;" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 5 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgb(255, 185, 59);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 3 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgba(0, 255, 0, 1);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 4 %}
+                     <div style="margin-right: 12px">
+                        <img style="border-color: rgb(0, 0, 255);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+            </div>
+
+
+            <div class="grid__col-50 content-heros">
+                <div class="content-heros-box">
+                    <img src="https://rerollcdn.com/icons/debonair.png" alt="Thách đấu" class="content-heros-icon">
+                </div>                
+                <h3 class="content-heros-tribe">Thanh lịch</h3>
+                <p class="content-heros-tribe-text">Tướng Thanh Lịch nhận thêm Máu và Sức Mạnh Phép Thuật, và tỉ lệ bắt gặp một VIP Thanh Lịch trong cửa hàng cũng sẽ cao hơn.Nếu có một VIP Thanh Lịch trong đội hình, họ sẽ được kích hoạt một hiệu ứng đặc trưng. Bạn phải bán VIP cũ để VIP mới có cơ hội được xuất hiện trong cửa hàng.</p>
+                <ul class="content-heros-tribe-menu">
+                      <div style="display: flex; margin-bottom: 4px; align-items: center"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(52, 46, 31);">3</div><li class="content-heros-tribe-menu-list">200 máu, 20 sức mạnh phép thuật</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(111, 73, 57);">5</div><li class="content-heros-tribe-menu-list">400 máu, 45 sức mạnh phép thuật</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(107, 107, 107);">7</div><li class="content-heros-tribe-menu-list">700 máu, 85 sức mạnh phép thuật</li></div>
+                </ul> 
+
+                <div class="content-heros-tribe-members">
+                          {% for item in thanhlich %}
+                    {% if item.Money == 2 %}
+                    <div style="margin-right: 12px">
+                        <img src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 1 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: #707070;" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 5 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgb(255, 185, 59);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 3 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgba(0, 255, 0, 1);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 4 %}
+                     <div style="margin-right: 12px">
+                        <img style="border-color: rgb(0, 0, 255);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+            </div>
+
+            <div class="grid__col-50 content-heros">
+                <div class="content-heros-box">
+                    <img src="https://rerollcdn.com/icons/clockwork.png" alt="Thách đấu" class="content-heros-icon">
+                </div>                
+                <h3 class="content-heros-tribe">Máy móc</h3>
+                <p class="content-heros-tribe-text">Đội của bạn được tăng Tốc Độ Đánh, nhận thêm với mỗi nâng cấp trong Lõi Công Nghệ.</p>
+                <ul class="content-heros-tribe-menu">
+                      <div style="display: flex; margin-bottom: 4px; align-items: center"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(52, 46, 31);">2</div><li class="content-heros-tribe-menu-list">10% tốc độ đánh, 5% với mỗi nâng cấp</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(111, 73, 57);">4</div><li class="content-heros-tribe-menu-list">40% tốc độ đánh, 10% với mỗi nâng cấp</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(107, 107, 107);">6</div><li class="content-heros-tribe-menu-list">80% tốc đánh, 15% với mỗi nâng cấp</li></div>
+                </ul>
+
+                <div class="content-heros-tribe-members">
+                          {% for item in maymoc %}
+                    {% if item.Money == 2 %}
+                    <div style="margin-right: 12px">
+                        <img src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 1 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: #707070;" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 5 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgb(255, 185, 59);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 3 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgba(0, 255, 0, 1);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 4 %}
+                     <div style="margin-right: 12px">
+                        <img style="border-color: rgb(0, 0, 255);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+            </div>
+
+
+          <div class="grid__col-50 content-heros">
+                <div class="content-heros-box">
+                    <img src="https://rerollcdn.com/icons/enforcer.png" alt="Thách đấu" class="content-heros-icon">
+                </div>                
+                <h3 class="content-heros-tribe">Cảnh binh</h3>
+                <p class="content-heros-tribe-text">Tướng Cảnh Binh làm choáng kẻ địch ở đầu trận chiến. Mục tiêu được thả tự do sau 3 giây. Cảnh Binh sẽ không cố bắt giữ những kẻ địch được miễn nhiễm khống chế.</p>
+                <ul class="content-heros-tribe-menu">
+                      <div style="display: flex; margin-bottom: 4px; align-items: center"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(52, 46, 31);">3</div><li class="content-heros-tribe-menu-list">Mục tiêu máu tối đa lớn nhất và mục tiêu gây sát thương nhiều nhất ở vòng đấu trước đó</li></div>
+                  
+                </ul>
+
+                <div class="content-heros-tribe-members">
+                          {% for item in canhbinh %}
+                    {% if item.Money == 2 %}
+                    <div style="margin-right: 12px">
+                        <img src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 1 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: #707070;" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 5 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgb(255, 185, 59);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 3 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgba(0, 255, 0, 1);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 4 %}
+                     <div style="margin-right: 12px">
+                        <img style="border-color: rgb(0, 0, 255);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+            </div>
+
+
+              <div class="grid__col-50 content-heros">
+                <div class="content-heros-box">
+                    <img src="https://rerollcdn.com/icons/chemtech.png" alt="Thách đấu" class="content-heros-icon">
+                </div>                
+                <h3 class="content-heros-tribe">Hóa kỹ</h3>
+                <p class="content-heros-tribe-text">Sau khi xuống dưới ngưỡng 75@% Máu, tướng Hóa Kỹ được bơm hóa chất, nhận thêm Tốc Độ Đánh,giảm sát thương nhận vào và hồi máu mỗi giây theo phần trăm máu tối đa
+</p>
+                <ul class="content-heros-tribe-menu">
+                       <div style="display: flex; margin-bottom: 4px; align-items: center"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(52, 46, 31);">3</div><li class="content-heros-tribe-menu-list">15% tốc độ đánh, 4% hồi máu tối đa</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(111, 73, 57);">5</div><li class="content-heros-tribe-menu-list">40% tốc độ đánh, 7% hồi máu tối đa</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(107, 107, 107);">7</div><li class="content-heros-tribe-menu-list">80% tốc đánh, 10% máu tối đa</li></div>
+                    <div style="display: flex; margin-bottom: 4px; align-items: center;"><div class="content-heros-tribe-menu-list-box" style="background-color: rgb(162, 114, 8);">9</div><li class="content-heros-tribe-menu-list">150% tốc độ đánh, 18% máu tối đa</li></div>
+                </ul>
+
+                <div class="content-heros-tribe-members">
+                          {% for item in hoaky %}
+                    {% if item.Money == 2 %}
+                    <div style="margin-right: 12px">
+                        <img src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 1 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: #707070;" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 5 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgb(255, 185, 59);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 3 %}
+                    <div style="margin-right: 12px">
+                        <img style="border-color: rgba(0, 255, 0, 1);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                    {% if item.Money == 4 %}
+                     <div style="margin-right: 12px">
+                        <img style="border-color: rgb(0, 0, 255);" src="{{item.Image.url}}" alt="Warwick" class="content-heros-tribe-members-img">
+                        <h3 class="content-heros-tribe-members-name">{{item.Name}}</h3>
+                    </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- <footer class="footer"></footer> -->
+
+    
+
+
+
+
+    </div>
+
+    <script src="{% static 'javascripts/mainpage.js' %}"></script>
+    <script src="{% static 'javascripts/mainpage2.js' %}"></script>
+</body>
+</html>    
+{% endblock %}

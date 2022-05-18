@@ -1,0 +1,61 @@
+:root{
+    --while-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+
+}
+* {
+    box-sizing: inherit; /*inherit - ke thừa thẻ chứa nó */
+
+}
+html {
+    font-size: 62.5%; /*1rem = 10px*/
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif; /*chung chữ ko chân */
+    box-sizing: border-box; /*cá thẻ sẽ kế thừa theo thuộc tính này */
+    margin: -10px;
+}
+html, body{
+    max-width: 100%;
+    overflow-x: hidden ;
+    /* overflow-y:  ; */
+    margin: 0;
+}
+.bro{
+    width: 20%;
+
+}
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.grid__full-with {
+    width: 100%;
+}
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 12px;
+    margin-right: 12px;
+    
+}
+.grid__col-20{
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 19%;
+}
+.grid__col-50{
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 49%;
+    
+}
+.grid__panes.exit{
+    display: none;
+}
+.content-list-name.test.testjs{
+    background-color: #365694;
+    color: #fff;
+}

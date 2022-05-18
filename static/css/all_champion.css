@@ -1,11 +1,11 @@
 body{
-    background-color: #1e1d32;
+    background-color: #0d202b;
    margin: 0%;
     
 }
 
 .toptable{
-    background-color: #2d2b56;
+    background-color: #0d202b;
     display: flex;
     width: 1080px;
     height: 124px;
@@ -13,6 +13,7 @@ body{
    
     margin-left: 113px;
    justify-content: space-between;
+   border: 1px solid #17313a;
     
 }
 .search{
@@ -26,7 +27,7 @@ body{
     border-radius: 5px;
 }
 .colum2{
-    text-align: center;
+    /* text-align: center; */
     padding-right: 68px;
     margin-top: 20px;
 }
@@ -34,21 +35,21 @@ body{
 .btn{
     width: 59px;
     height: 29px;
-    border: 1px solid #7c69e3;
+    border: 1px solid #123040;
     border-radius: 5px; 
-    background-color: #7c69e3; 
+    background-color: #123040; 
     color: #fff;
     cursor: pointer;
     
 }
 .toc{
     border-radius: 5px; 
-    background-color: #7c69e3; 
+    background-color: #123040; 
     width: 568px;
 }
 .he{
     margin-top: 15px;
-    background-color: #7c69e3; 
+    background-color: #123040; 
     border-radius: 5px; 
 }
 
@@ -82,9 +83,10 @@ body{
 .bottable{
     height: 376px;
     width: 1080px;
-    background-color: #3d0e96;
+    background-color: #17313a;
     margin-left: 113px;
     margin-right: 113px;
+    border: 1px solid #17313a;
 }
 .list{
     margin-left: 30px;
@@ -131,8 +133,8 @@ footer{
     margin-top: 202px;
     padding-top: 20px;
     padding-left: 20px;
-    background-color: #13121e;
-text-align: center;
+    background-color: #102531;
+/* text-align: center; */
     color: #fff;
     height: 165px;
 }

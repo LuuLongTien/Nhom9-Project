@@ -1,0 +1,261 @@
+{% extends "getchamp/base.html" %}
+{% block content %}
+{% load static %}
+<!doctype html>
+<html>
+<head>
+    <title>My webpage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta property="og:title" content=">
+            <meta property=" og:description" content="">
+   <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+</head>
+<body>
+    {% for item in user %}
+    <div class="zn-container">
+        <div id="znid-686554638517" class="zn-element-wrapper 
+                
+              " data-type="row" data-layout="3-9 3-9 12-12" data-background-type="color" data-full-width="false" data-vertical-align="top" data-border-enable="false" data-shadow-enable="false">
+            <div class="zn-element zn-lg  ">
+                <div class="zn-row " id="" data-element-animation="" data-scroll-animation="">
+                    <div class="zn-column zn-column-lg-3 zn-column-md-3 zn-column-sm-12">
+                        <div class="zn-children">
+                            <div class="zn-child">
+                                <div class="zn-template">
+                                    <div id="znid-397785688962" class="zn-element-wrapper 
+                
+              " data-type="image" data-background-type="color" data-filter="none" data-border-enable="false" data-shadow-enable="false">
+                                        <div class="zn-element zn-lg  ">
+                                            <div class="zn-image">
+                                                <img id="" class=" zn-nodrag" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpY0PT9Nx-q6ogDmoB8NH6Qg3IB9YrdsQRleDrQ4_u7WcafFUFv7gEVJ5GVTnd6CA0cpo&usqp=CAU" alt="" draggable="false" data-element-animation="" data-scroll-animation="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="zn-column zn-column-lg-9 zn-column-md-9 zn-column-sm-12">
+                        <div class="zn-children">
+                            <div class="zn-child">
+                                <div class="zn-template">
+                                    <div id="znid-170948515404" class="zn-element-wrapper 
+                
+              " data-type="row" data-layout="3-9 3-9 12-12" data-full-width="false" data-vertical-align="top" data-background-type="none" data-border-enable="false" data-shadow-enable="false">
+                                        <div class="zn-element zn-lg  ">
+                                            <div class="zn-row " id="" data-element-animation="" data-scroll-animation="">
+                                                <div class="zn-column zn-column-lg-3 zn-column-md-3 zn-column-sm-12">
+                                                    <div class="zn-children">
+                                                        <div class="zn-child">
+                                                            <div class="zn-template">
+                                                                <div id="znid-666110839676" class="zn-element-wrapper 
+                
+              " data-type="text" data-background-type="none" data-border-enable="false" data-shadow-enable="false" data-text-shadow-enable="false">
+                                                                    <div class="zn-element zn-lg  ">
+                                                                        <div id="" class="zn-text " data-element-animation="" data-scroll-animation=""><b>Username:</b></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="zn-column zn-column-lg-9 zn-column-md-9 zn-column-sm-12">
+                                                    <div class="zn-children">
+                                                        <div class="zn-child">
+                                                            <div class="zn-template">
+                                                                <div id="znid-777457412209" class="zn-element-wrapper 
+                
+              " data-type="text" data-background-type="none" data-border-enable="false" data-shadow-enable="false" data-text-shadow-enable="false">
+                                                                    <div class="zn-element zn-lg  ">
+                                                                        <div id="" class="zn-text " data-element-animation="" data-scroll-animation="">{{item.username}}</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="zn-child">
+                                <div class="zn-template">
+                                    <div id="znid-623608657660" class="zn-element-wrapper 
+                
+              " data-type="row" data-layout="3-9 3-9 12-12" data-full-width="false" data-vertical-align="top" data-background-type="none" data-border-enable="false" data-shadow-enable="false">
+                                        <div class="zn-element zn-lg  ">
+                                            <div class="zn-row " id="" data-element-animation="" data-scroll-animation="">
+                                                <div class="zn-column zn-column-lg-3 zn-column-md-3 zn-column-sm-12">
+                                                    <div class="zn-children">
+                                                        <div class="zn-child">
+                                                            <div class="zn-template">
+                                                                <div id="znid-498427604436" class="zn-element-wrapper 
+                
+              " data-type="text" data-background-type="none" data-border-enable="false" data-shadow-enable="false" data-text-shadow-enable="false">
+                                                                    <div class="zn-element zn-lg  ">
+                                                                        <div id="" class="zn-text " data-element-animation="" data-scroll-animation=""><b>Name:</b></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="zn-column zn-column-lg-9 zn-column-md-9 zn-column-sm-12">
+                                                    <div class="zn-children">
+                                                        <div class="zn-child">
+                                                            <div class="zn-template">
+                                                                <div id="znid-732048093287" class="zn-element-wrapper 
+                
+              " data-type="text" data-background-type="none" data-border-enable="false" data-shadow-enable="false" data-text-shadow-enable="false">
+                                                                    <div class="zn-element zn-lg  ">
+                                                                        <div id="" class="zn-text " data-element-animation="" data-scroll-animation="">{{item.first_name}} {{item.last_name}}</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="zn-child">
+                                <div class="zn-template">
+                                    <div id="znid-862483192131" class="zn-element-wrapper 
+                
+              " data-type="row" data-layout="3-9 3-9 12-12" data-full-width="false" data-vertical-align="top" data-background-type="none" data-border-enable="false" data-shadow-enable="false">
+                                        <div class="zn-element zn-lg  ">
+                                            <div class="zn-row " id="" data-element-animation="" data-scroll-animation="">
+                                                <div class="zn-column zn-column-lg-3 zn-column-md-3 zn-column-sm-12">
+                                                    <div class="zn-children">
+                                                        <div class="zn-child">
+                                                            <div class="zn-template">
+                                                                <div id="znid-563399160667" class="zn-element-wrapper 
+                
+              " data-type="text" data-background-type="none" data-border-enable="false" data-shadow-enable="false" data-text-shadow-enable="false">
+                                                                    <div class="zn-element zn-lg  ">
+                                                                        <div id="" class="zn-text " data-element-animation="" data-scroll-animation=""><b>Email:</b></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="zn-column zn-column-lg-9 zn-column-md-9 zn-column-sm-12">
+                                                    <div class="zn-children">
+                                                        <div class="zn-child">
+                                                            <div class="zn-template">
+                                                                <div id="znid-287514436388" class="zn-element-wrapper 
+                
+              " data-type="text" data-background-type="none" data-border-enable="false" data-shadow-enable="false" data-text-shadow-enable="false">
+                                                                    <div class="zn-element zn-lg  ">
+                                                                        <div id="" class="zn-text " data-element-animation="" data-scroll-animation="">{{item.email}}</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="zn-child">
+                                <div class="zn-template">
+                                    <div id="znid-425789447946" class="zn-element-wrapper 
+                
+              " data-type="row" data-layout="3-9 3-9 12-12" data-full-width="false" data-vertical-align="top" data-background-type="none" data-border-enable="false" data-shadow-enable="false">
+                                        <div class="zn-element zn-lg  ">
+                                            <div class="zn-row " id="" data-element-animation="" data-scroll-animation="">
+                                                <div class="zn-column zn-column-lg-3 zn-column-md-3 zn-column-sm-12">
+                                                    <div class="zn-children">
+                                                        <div class="zn-child">
+                                                            <div class="zn-template">
+                                                                <div id="znid-863023341102" class="zn-element-wrapper 
+                
+              " data-type="text" data-background-type="none" data-border-enable="false" data-shadow-enable="false" data-text-shadow-enable="false">
+                                                                    <div class="zn-element zn-lg  ">
+                                                                        <div id="" class="zn-text " data-element-animation="" data-scroll-animation=""><b>Date joined:</b></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="zn-column zn-column-lg-9 zn-column-md-9 zn-column-sm-12">
+                                                    <div class="zn-children">
+                                                        <div class="zn-child">
+                                                            <div class="zn-template">
+                                                                <div id="znid-676401076231" class="zn-element-wrapper 
+                
+              " data-type="text" data-background-type="none" data-border-enable="false" data-shadow-enable="false" data-text-shadow-enable="false">
+                                                                    <div class="zn-element zn-lg  ">
+                                                                        <div id="" class="zn-text " data-element-animation="" data-scroll-animation="">{{item.date_joined}}</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="zn-child">
+                                <div class="zn-template">
+                                    <div id="znid-928359088669" class="zn-element-wrapper 
+                
+              " data-type="horizontal_line" data-background-type="none" data-shadow-enable="false">
+                                        <div class="zn-element zn-lg  ">
+                                            <div class="zn-horizontal-line">
+                                                <hr id="" class="" data-element-animation="" data-scroll-animation="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="zn-child">
+                                <div class="zn-template">
+                                    <div id="znid-401854072856" class="zn-element-wrapper 
+                
+              " data-type="button" data-shadow-enable="false" data-border-enable="false" data-full-width="false">
+                                        <div class="zn-element zn-lg  ">
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="zn-addon-wrapper" type="page-settings">
+        </div>
+        <div class="zn-addon-wrapper" type="container-style">
+        </div>
+        <div class="zn-addon-wrapper" type="messenger">
+            <div class="zn-addon zn-lg  ">
+                <div class="zn-messenger">
+                    <div class="fb-customerchat" page_id="" theme_color="#0A7CFF" greeting_dialog_display="hide"></div>
+                </div>
+            </div>
+        </div>
+        <div class="zn-addon-wrapper" type="announcement-bar">
+        </div>
+        <div class="zn-addon-wrapper" type="breakpoints">
+        </div>
+        <div class="zn-addon-wrapper" type="custom-css">
+        </div>
+    </div>
+    {% endfor %}
+    <script src="{% static 'css/profile.css' %}"></script>
+</body>
+</html>
+{% endblock %}

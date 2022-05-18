@@ -1,0 +1,171 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+    font-family: 'Roboto Medium' sans-serif;
+    background-color: #0d202b;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    /* display: inline-grid;
+    align-content: center; */
+    background: #0d202b;
+}
+
+.container{   
+   
+}
+
+.header{
+    margin-right: 1px;
+}
+
+.TeamMeta{
+    padding-top: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button:hover{
+    cursor: pointer;
+}
+.Team{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    background-color: #102531;
+    height: 300px;
+    transition: all .3s;
+    border-radius: 20px;
+    border: 1px solid #143041;
+}
+
+.TeamName{
+    font-size: 30px;
+    display: block;
+    width: 250px;
+    color: white;
+    font-family: 'inherit';
+}
+
+.AllTeam{
+    display: flex;
+    flex-flow: row nowrap;
+    cursor: pointer;
+    padding-right: 2rem;
+}
+
+.ChamWithItem{
+    margin-left: 2rem;
+    margin-right: 3rem;
+    border-radius: 10px;
+}
+
+.Champion{
+    border-radius: 10px;
+}
+
+.ChamImg{
+    vertical-align: middle;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    border: 2px solid red;
+}
+
+.HeToc{
+   margin-bottom: 1.5rem;
+}
+
+.content {
+    height: 204px;
+    width: 316px;
+    display: inline-grid;
+}
+
+.toc{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.he{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.trung {
+    display: flex;
+    align-items: center;
+}
+.hexagon{
+    width: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+}
+.he-text {
+    display: flex;
+    align-items: center;
+    color: #ccc;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+.HeIcon{
+    width: 35px;
+    position: absolute;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+.Heicon{
+    
+        width: 35px;
+        position: absolute;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+    
+}
+
+.TenHeToc {
+    margin-left: 1.5rem;
+    font-family: "Roboto Medium";
+    font-size: 11px;
+    display: flex;
+}
+
+.HePhu{
+    font-size: 15px;
+    font-family: "Roboto Medium";
+    
+    left: 627px;
+    top: 213px;
+}
+.HeTocngu {
+    font-size: 15px;
+    left: 627px;
+    top: 213px;
+    display: flex;
+    align-items: center;
+}
+
+.icon{
+    width: 50%;
+    height: 50%;
+}
+
+.circle {
+  height: 25px;
+  width: 25px;
+  background-color: rgb(255,185,59);
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 1rem;
+}

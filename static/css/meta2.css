@@ -1,0 +1,254 @@
+// Scss Document
+$text-color: #ffffff;
+$primary-color: #7c69e3;
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto Medium' sans-serif;
+    background-color: #1e1d32;
+}
+
+@mixin flex($align: flex-start, $justify: flex-start, $wrap: nowrap) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-wrap: $wrap;
+}
+
+.wrapper{
+   
+   
+}
+
+.container{   
+   
+   
+}
+
+
+
+.tabMeta {
+    display: flex;
+    flex-direction: row;
+    height: 44px;
+    width: 97.94px;
+    display: block;
+    color: white;
+    line-height: 40px;
+    padding: 0 25px;
+    border-radius: 8px 8px 4px 0;
+    text-align: center;
+    font-family: 'inherit';
+    font-size: 16px;
+    cursor: pointer;
+    transition: all .3s;
+    box-sizing: border-box;
+    background-color: #102531;
+}
+.line{
+   background-color: #7c69e3;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 4px;
+    width: 99.9%;
+}
+
+
+.headers{
+    padding-top: 2rem;
+    margin-right: 1px;
+    background-color: #0d202b;
+}
+
+.TeamMeta{
+    padding-top: 3.5rem;
+    background-color: #0d202b;
+}
+
+.Team{
+    border-color: rgb(201, 89, 89);
+    border: 1px solid #ffc107;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    width: 90%;
+    background-color: #102531;
+    height: 95px;
+    padding-left: 30px;
+    padding-right: 30px;
+    transition: all .3s;
+    margin-bottom: 15px;
+    position: relative;
+    box-sizing: border-box;
+    margin-left: 55px;
+}
+
+.TeamName{
+    display: block;
+    width: 250px;
+    height: 16px;
+    color: white;
+    font-family: 'inherit';
+    font-size: 20px;
+}
+
+.TeamLevel1{
+    background-color: rgb(201,89,89);
+    display: block;
+    width: 25px;
+    height: 30px;
+    border-radius: 0 0 12px 12px;
+    position: fixed;
+    text-align: center;
+    color: black;
+    font-family: 'inherit';
+    line-height: 32px;
+}
+
+.TeamLevel2{
+    background-color: rgb(58,208,216);
+    display: block;
+    width: 25px;
+    height: 30px;
+    border-radius: 0 0 12px 12px;
+    position: fixed;
+    text-align: center;
+    color: black;
+    font-family: 'Roboto Medium';
+    line-height: 32px;
+    margin-left: 2.2rem;
+}
+
+.TeamTag{
+    width: 50px ;
+    height: 50px;
+    
+}
+
+.TeamLevel{
+    display: block;
+    background-color: white;
+    width: 10px;
+    height: 15px;
+    border: 0 0 11px 11px;
+    font-family: "Roboto Medium";
+    font-size: 10px;
+    color: black;
+}
+
+.ChiTiet{
+    display: block;
+    width: 125px;
+    height: 40px;
+    border-radius: 5px;
+    color: white;
+    line-height: 40px;
+    text-align: center;
+    font-family: 'Roboto Medium';
+    
+}
+
+.AllTeam{
+    display: flex;
+    flex-flow: row nowrap;
+    width: 430px;
+    cursor: pointer;
+}
+
+.ChamWithItem{
+    margin-left: 3px;
+    margin-right: 7px;
+    position: relative;
+    height: 61px;
+    width: 37px;
+}
+
+.Star{
+    color: rgb(194,212,248);
+    font-size: 11px;
+    text-align: center;
+    margin-bottom: 3px;
+}
+
+
+.Champion{
+    width: 35px;
+    height: 35px;
+}
+
+.ChamImg{
+    vertical-align: middle;
+    width: 35px;
+    height: 35px;
+    border: 2px solid red;
+}
+
+.Item{
+    position: absolute;
+    bottom: 4px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    width: 37px;
+}
+
+.ItemMini{
+    width: 12px;
+    height: 12px;
+}
+
+.HeToc{
+    display: flex;
+    flex-flow: row nowrap;
+    width: 334px;
+    padding-top: 10px;
+}
+
+.He{
+    margin-left: 5px;
+}
+
+.HeElement{
+    width: 35px;
+    height: 50px;
+   
+}
+
+.hexagon{
+    width: 36px;
+    height: 55px;
+    clip-path: polygon(42.86% 0%, 85.7% 15%, 100% 15%, 100% 45%,  85.7% 45%, 42.86% 60%, 0% 45%, 0% 15%);
+    background-color: white;
+    margin-top: 15px;    
+}
+
+.HeIcon{
+    width: 35px;
+    position: absolute;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.icon{
+    width: 50%;
+    height: 50%;
+    padding-top: 8px;
+    padding-right: 4.5px;
+}
+
+
+.Amouth {
+    padding-top: 12px;
+    padding-left: 28px;
+    font-family: "Roboto Medium";
+    font-size: 9px;
+    color: white;
+    position: absolute;
+}

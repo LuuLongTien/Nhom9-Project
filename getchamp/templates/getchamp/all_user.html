@@ -1,0 +1,111 @@
+{% extends "getchamp/base.html" %}
+{% block content %}
+{% load static %}
+<!doctype html>
+<html>
+<head>
+    <title>My webpage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta property="og:title" content=">
+            <meta property=" og:description" content="">
+    <link rel="stylesheet" href="{% static 'css/me_and_the_boys.css' %}">
+</head>
+<body>
+{% for item in anyone %}
+    <div class="zn-container">
+        <div id="znid-000552089573" class="zn-element-wrapper 
+                
+              " data-type="row" data-layout="12 12 12" data-background-type="color" data-full-width="false" data-vertical-align="top" data-border-enable="false" data-shadow-enable="false">
+            <div class="zn-element zn-lg  ">
+                <div class="zn-row " id="" data-element-animation="" data-scroll-animation="">
+                    <div class="zn-column zn-column-lg-12 zn-column-md-12 zn-column-sm-12">
+                        <div class="zn-children">
+                            <div class="zn-child">
+                                <div class="zn-template">
+                                    <div id="znid-289870498322" class="zn-element-wrapper 
+                
+              " data-type="row" data-layout="2-10 2-10 12-12" data-vertical-align="center" data-background-type="color" data-full-width="false" data-border-enable="false" data-shadow-enable="false">
+                                        <div class="zn-element zn-lg  ">
+                                            <div class="zn-row " id="" data-element-animation="" data-scroll-animation="">
+                                                <div class="zn-column zn-column-lg-2 zn-column-md-2 zn-column-sm-12">
+                                                    <div class="zn-children">
+                                                        <div class="zn-child">
+                                                            <div class="zn-template">
+                                                                <div id="znid-321143028913" class="zn-element-wrapper 
+                
+              " data-type="image" data-filter="none" data-background-type="none" data-border-enable="false" data-shadow-enable="false">
+                                                                    <div class="zn-element zn-lg  ">
+                                                                        <div class="zn-image">
+                                                                            <img id="" class=" zn-nodrag" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtJAW11U8mBckhFSpg5d1SnQWgN62gbDgCs_FyCzkX7JthbcxJ6Ko-XKnkWru507_2NFA&usqp=CAU" alt="" draggable="false" data-element-animation="" data-scroll-animation="" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="zn-column zn-column-lg-10 zn-column-md-10 zn-column-sm-12">
+                                                    <div class="zn-children">
+                                                        <div class="zn-child">
+                                                            <div class="zn-template">
+                                                                <div id="znid-287797722550" class="zn-element-wrapper 
+                
+              " data-type="heading" data-border-enable="false" data-background-type="none" data-shadow-enable="false" data-text-shadow-enable="false">
+                                                                    <div class="zn-element zn-lg  ">
+                                                                        <h3 id="" class="zn-heading " data-element-animation="" data-scroll-animation="">{{item.username}}</h3>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="zn-child">
+                                                            <div class="zn-template">
+                                                                <div id="znid-203763175574" class="zn-element-wrapper 
+                
+              " data-type="button" data-full-width="false" data-border-enable="true" data-shadow-enable="false">
+                                                                    <div class="zn-element zn-lg  ">
+                                                                    <form name = "clicky" method = "GET" action ="">
+                                                                        <div class="zn-button">
+                                                                            <button name = "button1" value="{{item.username}}" id="" class="" data-element-animation="" data-scroll-animation=""><u>Xem</u></button>
+                                                                        </div>
+                                                                    </form>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="zn-addon-wrapper" type="page-settings">
+        </div>
+        <div class="zn-addon-wrapper" type="container-style">
+        </div>
+        <div class="zn-addon-wrapper" type="messenger">
+            <div class="zn-addon zn-lg  ">
+                <div class="zn-messenger">
+                    <div class="fb-customerchat" page_id="" theme_color="#0A7CFF" greeting_dialog_display="hide"></div>
+                </div>
+            </div>
+        </div>
+        <div class="zn-addon-wrapper" type="announcement-bar">
+        </div>
+        <div class="zn-addon-wrapper" type="breakpoints">
+        </div>
+        <div class="zn-addon-wrapper" type="custom-css">
+        </div>
+    </div>
+    {% endfor %}
+    <script src="{% static 'javascripts/me_and_the_boys.js' %}"></script>
+</body>
+</html>
+{% endblock %}

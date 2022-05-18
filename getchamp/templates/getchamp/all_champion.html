@@ -1,3 +1,5 @@
+{% extends "getchamp/base.html" %}
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +12,7 @@
 </head>
 <body > 
     
-    <div class="toptable" style="margin-top:0%">
+    <div class="toptable" style="margin-top:3%">
 
         <div class="colum1">
         <form method="GET" action ="">
@@ -63,33 +65,68 @@
         </div>
     </div>
 
-    <div class="bottable" style="background-color: #292845;">
-        <div class="list" style="display: flex; flex-wrap: wrap; " style="background-color: #292845">
+    <div class="bottable" style="background-color: #102531;">
+        <div class="list" style="display: flex; flex-wrap: wrap; " style="background-color: #17313a">
             {% for item in post %}
+            {% if item.Money == 5 %}
                 <form name ="d" method="GET" action="/app/search/info">
                 <div class="champ">
-                <button style="background-color: #292845; border:none; color:#fff" name ="xname" value ={{item.Name}} type = "submit" >
+                <button style="background-color: #102531; border:none; color:#fff" name ="xname" value ={{item.Name}} type = "submit" >
                 
-                    <img class="b" src="{{item.Image.url}}" alt="" >
+                    <img class = "b" style="border-color: rgb(255, 185, 59);" src="{{item.Image.url}}" alt="">
                     {{item.Name}}
                 </button>
                 </div>
                 </form>
+            {% endif %}
+            {% if item.Money == 4 %}
+                <form name ="d" method="GET" action="/app/search/info">
+                <div class="champ">
+                <button style="background-color: #102531; border:none; color:#fff" name ="xname" value ={{item.Name}} type = "submit" >
+                
+                    <img class = "b" style="border-color: rgb(192, 0, 129);" src="{{item.Image.url}}" alt="">
+                    {{item.Name}}
+                </button>
+                </div>
+                </form>
+            {% endif %}
+            {% if item.Money == 3 %}
+                <form name ="d" method="GET" action="/app/search/info">
+                <div class="champ">
+                <button style="background-color: #102531; border:none; color:#fff" name ="xname" value ={{item.Name}} type = "submit" >
+                
+                    <img class = "b" style="border-color: rgba(0, 255, 0, 1);" src="{{item.Image.url}}" alt="">
+                    {{item.Name}}
+                </button>
+                </div>
+                </form>
+            {% endif %}
+            {% if item.Money == 2 %}
+                <form name ="d" method="GET" action="/app/search/info">
+                <div class="champ">
+                <button style="background-color:#102531; border:none; color:#fff" name ="xname" value ={{item.Name}} type = "submit" >
+                
+                    <img class = "b" style="border-color: rgb(0, 0, 255);" src="{{item.Image.url}}" alt="">
+                    {{item.Name}}
+                </button>
+                </div>
+                </form>
+            {% endif %}
+            {% if item.Money == 1 %}
+                <form name ="d" method="GET" action="/app/search/info">
+                <div class="champ">
+                <button style="background-color: #102531; border:none; color:#fff" name ="xname" value ={{item.Name}} type = "submit" >
+                
+                    <img class = "b" style="border-color: #707070;" src="{{item.Image.url}}" alt="">
+                    {{item.Name}}
+                </button>
+                </div>
+                </form>
+            {% endif %}
             {% endfor %}
             
         </div>
     </div>
 </body>
-<footer style="margin-top: 0%">
-   Liên hệ quảng cáo: lmssplus.com@gmail.com
-   <br>
-   
-
-Copyright 2022dtcl.gg. All rights reserved. <br>
-
-Dtcl.gg isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. 
-League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.
-
-
-</footer>
 </html>
+{% endblock %}

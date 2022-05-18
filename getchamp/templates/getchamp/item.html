@@ -1,0 +1,46 @@
+{% extends "getchamp/base.html" %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/item.css' %}">
+</head>
+<body >
+    
+    <div class="top">
+      <form method="GET" action ="">
+        <input name = "a" class="search-bar" type="text" placeholder="Tìm trang bị" >
+         </form>  
+        <div class="item-filter">
+        <form name='itemfilter' method = 'GET' action = "">
+            <button class="item-button"> Item</button>
+            <button name = "item" value = "RecurveBow"><img class="item-piece" src="https://dtcl.gg/item/recurve_bow.png" alt=""></button>
+            <button name = "item" value = "ChainVest"><img class="item-piece" src="https://dtcl.gg/item/chain_vest.png" alt=""></button>
+            <button name = "item" value = "TearoftheGoddess"><img class="item-piece" src="https://dtcl.gg/item/tear_of_the_goddess.png" alt=""></button>
+            <button name = "item" value = "NegatronCloak"><img class="item-piece" src="https://dtcl.gg/item/negatron_cloak.png" alt=""></button>
+            <button name = "item" value = "B.F.Sword"><img class="item-piece" src="https://dtcl.gg/item/icon_bfsword.png" alt=""></button>
+            <button name = "item" value = "SparringGloves"><img class="item-piece" src="https://dtcl.gg/item/sparring_gloves.png" alt=""></button>
+            <button name = "item" value = "Spatula"><img class="item-piece" src="https://dtcl.gg/item/spatula.png" alt=""></button>
+            <button name = "item" value = "NeedlesslyLargeRod"><img class="item-piece" src="https://dtcl.gg/item/needlessly_large_rod.png" alt=""></button>
+            <button name = "item" value = "GiantsBelt"><img class="item-piece" src="https://dtcl.gg/item/gaints_belt.png" alt=""></button>
+            <button ><img class="item-piece" src="https://www.pngall.com/wp-content/uploads/5/Red-X-Letter-PNG-Free-Download.png" alt=""></button>
+        </form>
+        </div>    
+    </div>
+
+    <div class="bot"> 
+    {% for item in post %}
+        <img class="item" src="{{item.Image.url}}" alt="">
+    {% endfor %}
+   
+    </div>
+
+</body>
+</html>
+
+{% endblock %}

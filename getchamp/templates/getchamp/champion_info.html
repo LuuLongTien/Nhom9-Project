@@ -1,5 +1,110 @@
-{% for item in post %}
-    {{item.Name}}
-    {{item.Class}}
-     <img class="b" src="{{item.Image.url}}" alt="" >
-{% endfor %}
+{% load static %}
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>User Interface</title>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'css/champion_static.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/champion_static2.css' %}"/>
+    <link rel="stylesheet" href="style.scss"/>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+</head>
+
+	
+<body>
+
+
+<div class="wrapper">
+    
+        <div class="container" style="margin:15px">
+            <a class="button" style="margin: 15px; width: 80px; height: 30px; font-size: 20px; font-weight: 500; color:white; text-decoration:none;" href="/app/search">←Quay lại</a>
+        </div>   
+   
+    {% comment %} <button href = "getchamp/search"> {% endcomment %}
+    {% for item in post %}
+    <div class = "TeamMeta">
+        <div class = "Team">   
+            <div class = "AllTeam">
+                <div class = "ChamWithItem">
+                    <div class = "Champion"> 
+                        <img src = "{{item.Image.url}}" class="ChamImg" style= "border-color: rgba(196,64,218,1.00);">
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+
+                <div class = "TeamName">
+                    <div">{{item.Name}}</div>
+                    
+                        <div class="he">
+                            <div class = "hexagon" style="background-color: rgb(255,185,59);">
+                                <div class = "HeIcon" >
+                                {% if item.Class == 'Striker' %}
+                                <img src = "https://rerollcdn.com/icons/striker.png" class = "icon">
+                                {% else %}
+                                    <img src = "https://rerollcdn.com/icons/{{item.Class}}.png" class = "icon">
+                                {% endif %}
+                                </div>  
+                            </div>
+                            <div class="he-text">{{item.Class}}</div>
+                        </div>
+    
+                        <div class="toc">
+                            <div class = "hexagon" style="background-color: rgb(101,66,33);">
+                                <div class = "Heicon" >
+                                {% if item.Origin == 'Yordle' %}
+                                    <img src = "https://rerollcdn.com/icons/yordle.png" class = "icon">
+                                  {% elif item.Origin == 'Debonair' %}  
+                                    <img src = "https://rerollcdn.com/icons/debonair.png" class = "icon">
+                                {% elif item.Origin == 'Rival' %}
+                                <img src = "https://rerollcdn.com/icons/rival.png" class = "icon">
+                                {% elif item.Origin == 'Yordle-Lord' %}
+                                <img src = "https://rerollcdn.com/icons/yordle-lord.png" class = "icon">
+                                {% elif item.Origin == 'Hextech' %}
+                                <img src = "https://rerollcdn.com/icons/hextech.png" class = "icon">
+                                {% elif item.Origin == 'Hextech' %}
+                                <img src = "https://rerollcdn.com/icons/hextech.png" class = "icon">
+                                {% elif item.Origin == 'Mastermind' %}
+                                <img src = "https://rerollcdn.com/icons/mastermind.png" class = "icon">
+                                {% else %}
+                                   <img src = "https://rerollcdn.com/icons/{{item.Origin}}.png" class = "icon">
+                                {% endif %}
+                                </div>  
+                            </div>
+                            <div class="he-text">{{item.Origin}}</div>
+                        </div>
+
+                        </br>
+                        <div class="tien">
+                            <div class = "hexagon" style="background-color: rgb(255,185,59);">
+                                <div class = "HeIcon" >
+                                    <img src = "https://rerollcdn.com/ui/icon-gold.svg" class = "icon">
+                                </div>  
+                            </div>
+                            <div class="he-text">{{item.Money}}</div>
+                        </div>
+                    
+                    
+                    
+                    <div class="trung">
+                        <div class = "circle"></div>
+                        <div class = "circle"></div>
+                        <div class = "circle"></div>
+                        <div class = "circle"></div>
+                    </div>
+                    
+            </div>
+            </div>
+            
+        </div> 
+        
+    </div>
+    {% endfor %}
+    </div>
+</body>
+</html>

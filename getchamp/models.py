@@ -64,3 +64,33 @@ class Champion(models.Model):
     def __str__(self):
         return self.Name
 
+
+class Item(models.Model):
+    Name = models.CharField(max_length=100)
+    Image = models.ImageField()
+    Recipe1 = (
+        ('B.F.Sword', 'B.F.Sword'),
+        ('ChainVest', 'ChainVest'),
+        ('GiantsBelt', 'GiantsBelt'),
+        ('NeedlesslyLargeRod', 'NeedlesslyLargeRod'),
+        ('NegatronCloak', 'NegatronCloak'),
+        ('RecurveBow', 'RecurveBow'),
+        ('SparringGloves', 'SparringGloves'),
+        ('Spatula', 'Spatula'),
+        ('TearoftheGoddess', 'TearoftheGoddess'),
+    )
+    Recipe2 = (
+        ('B.F.Sword', 'B.F.Sword'),
+        ('ChainVest', 'ChainVest'),
+        ('GiantsBelt', 'GiantsBelt'),
+        ('NeedlesslyLargeRod', 'NeedlesslyLargeRod'),
+        ('NegatronCloak', 'NegatronCloak'),
+        ('RecurveBow', 'RecurveBow'),
+        ('SparringGloves', 'SparringGloves'),
+        ('Spatula', 'Spatula'),
+        ('TearoftheGoddess', 'TearoftheGoddess'),
+    )
+    MadeFrom1=models.CharField(max_length=100, default=Empty, choices= Recipe1)
+    MadeFrom2=models.CharField(max_length=100, default=Empty, choices= Recipe2)
+    def __str__(self):
+        return self.Name

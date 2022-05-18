@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all_champion.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base2.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap&subset=vietnamese" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'javascripts/all.min.js' %}">
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+</head>
+<body>
+    <div id="main">
+
+    <div id="header">
+        <div class="grid">
+      <nav class="header__navbar">
+      <form method = "">
+        <ul id="header__navbar-list">
+            <form action = "getchamp/search"><li class="header__navbar-item "><a class="fix" style="font-weight: 400;" href="/app/index">Trang chủ</a></li></form>
+            <li class="header__navbar-item "><a class="fix header__navbar--separate"  href="/app/search" >Tướng</a></li>
+            <li class="header__navbar-item "><a class="fix header__navbar--separate"  href="/app/item" name = "trangbi">Trang bị</a></li>
+            <li class="header__navbar-item "><a class="fix header__navbar--separate"  href="/app/class">Hệ tộc</a></li>
+            <li class="header__navbar-item "><a class="fix header__navbar--separate"  href="/app/meta">Meta</a></li>
+            <li class="header__navbar-item "><a class="fix header__navbar--separate"  href="/app/linhthu">Linh Thú</a></li>
+        </ul>
+        </form>
+        <ul class="header__navbar-list">
+            
+            <li class="header__navbar-item  fix"><a style="color: white; text-decoration: none" href="/app/profile">Xin chào {{request.user}}</li>
+            {% if user.is_authenticated %}
+            <li class="header__navbar-item  fix"><a style="color: white; text-decoration: none" href="/app/logout">Đăng xuất</a></li>
+            {% else %}
+            <li class="header__navbar-item header__navbar--separate fix" style="font-weight: 400"><a style="color: white; text-decoration: none" href="/app/register">Đăng ký</a></li>
+            <li class="header__navbar-item header__navbar--separate fix" style="font-weight: 400"><a style="color: white; text-decoration: none" href="/app/login">Đăng nhập</a></li>
+            {% endif %}
+        </ul>
+      </nav>
+    
+        <div class="header__search">
+            <div class="header__search-logo">
+                <img class="header__search-logo-ptit" src="https://portal.ptit.edu.vn/wp-content/uploads/2016/04/ptit-logo.png" alt="Hình PTIT">
+            </div>
+        
+            <div class="header__search-input">
+             <form name="usersearch" method = "GET" action="" style="display: contents;">
+                <input name = "search" type="text" class="header__search-input-se" placeholder="Tìm kiếm">
+                  
+                <button class="header__search-selec">
+                    <i class="header__search-selec-icon fas fa-search"></i>
+                </button>
+             </form> 
+            </div>
+     
+           <div class="header__search-bell">
+                <i class="header__search-bell-icon"></i>
+            </div>
+
+        </div>
+        
+
+        </div>
+    </div>
+    {% block content  %}
+    {% endblock %}
+
+
+<footer style="font-size:14;">
+
+Nhóm thực hiện: Nhóm 9
+<br>
+   
+
+Bài tập lớn thiết kế website. <br>
+
+Lê Văn Đức - B19DCVT093;
+Nguyễn Anh Đức - B19DCVT095;
+Phạm Đình Quang - B19DCVT294;
+Phạm Xuân Quân - B19DCVT302;
+Lưu Long Tiến - B19DCVT318;
+
+
+</footer>

@@ -1,0 +1,1426 @@
+{% extends "getchamp/base.html" %}
+{% block content %}
+{% load static %}
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>User Interface</title>
+	
+<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://dtcl.gg/">
+	<link rel="stylesheet" href="{% static 'css/meta1.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/meta2.css' %}"/>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all_champion.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base2.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap&subset=vietnamese" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+</head>
+
+	
+<body>
+    
+<div class="wrapper">
+    <header class="headers">
+      <div class="container">
+          
+        <div class = "tabMeta"> Set 6.5</div>
+        <div class = "line"></div>
+        </div>
+        
+    </header>
+    
+    <div class = "TeamMeta">
+        <div class = "Team" style="border-color: rgb(201,89,89)">     
+            <div class = "TeamName">Draven Thanh Lịch</div>
+            <div class = "AllTeam">
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Draven.png" class="ChamImg" style= "border-color: rgba(196,64,218,1.00);" >
+                    </div>
+                    <div class = "Item">
+                        <img src ="https://dtcl.gg/item/bloodthirster.png" class = "ItemMini">
+                        <img src = "https://dtcl.gg/item/guinsoos_rageblade.png" class = "ItemMini">
+                        <img src = "https://dtcl.gg/item/giant_slayer.png" class = "ItemMini">
+                    </div>
+                </div>
+                
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Braum.png" class="ChamImg" style= "border-color: rgba(196,64,218,1.00);" >
+                    </div>
+                    <div class = "Item">
+                        <img src ="https://dtcl.gg/item/bramble_vest.png" class = "ItemMini">
+                        <img src = "https://dtcl.gg/item/dragons_claw.png" class = "ItemMini">
+                        
+                    </div>
+                </div>
+                
+                 <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Zeri.png" class="ChamImg" style= "border-color: rgb(255,185,59);" >
+                    </div>
+                    <div class = "Item">
+                        <img src ="https://dtcl.gg/item/morellonomicon.png" class = "ItemMini">
+                        <img src = "https://dtcl.gg/item/hand_of_justice.png" class = "ItemMini">
+                      
+                    </div>
+                </div>
+                
+                
+                 <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Leona.png" class="ChamImg" style= "border-color: rgb(32,122,199);" >
+                    </div>
+                    <div class = "Item">
+                    </div>
+                </div>
+                
+                
+                 <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Orianna.png" class="ChamImg" style= "border-color: rgba(196,64,218,1.00);" >
+                    </div>
+                    <div class = "Item">
+ 
+                    </div>
+                </div>
+                
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Jhin.png" class="ChamImg" style= "border-color: rgba(196,64,218,1.00);" >
+                    </div>
+                    <div class = "Item">
+ 
+                    </div>
+                </div>
+                
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Talon.png" class="ChamImg" style= "border-color: rgb(17,178,136);" >
+                    </div>
+                    <div class = "Item">
+ 
+                    </div>
+                </div>
+                
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Syndra.png" class="ChamImg" style= "border-color: rgb(17,178,136);" >
+                    </div>
+                    <div class = "Item">
+ 
+                    </div>
+                </div>
+                
+            </div>
+            <div class = "HeToc">
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: rgb(255,185,59);">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/debonair.png" class = "icon">
+                                 <div class = "Amouth">5</div>
+                            </div> 
+                        </div> 
+                    </div>     
+                </div>
+                
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: rgb(101,66,33);">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/sniper.png" class = "icon">
+                                 <div class = "Amouth">2</div>
+                            </div> 
+                        </div> 
+                    </div>      
+                </div>
+                
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: rgb(101,66,33);">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/clockwork.png" class = "icon">
+                                 <div class = "Amouth">2</div>
+                            </div> 
+                        </div> 
+                    </div>      
+                </div>
+                
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: rgb(101,66,33);">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/bodyguard.png" class = "icon">
+                                 <div class = "Amouth">2</div>
+                            </div> 
+                        </div> 
+                    </div>      
+                </div>
+                
+                
+            </div>
+        </div>
+        
+        <div class = "Team" style="border-color: rgb(201,89,89)">     
+            <div class = "TeamName">Ahri Pháp Sư Băng Đảng</div>
+            <div class = "AllTeam">
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Ahri.png" class="ChamImg" style= "border-color: rgb(255,185,59);" >
+                    </div>
+                    <div class = "Item">
+                        <img src ="https://dtcl.gg/item/blue_buff.png" class = "ItemMini">
+                        <img src = "https://dtcl.gg/item/jeweled_guantlet.png" class = "ItemMini">
+                        <img src = "https://dtcl.gg/item/infinity_edge.png" class = "ItemMini">
+                    </div>
+                </div>
+                
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Braum.png" class="ChamImg" style= "border-color: rgba(196,64,218,1.00);" >
+                    </div>
+                    <div class = "Item">
+                        <img src ="https://dtcl.gg/item/bramble_vest.png" class = "ItemMini">
+                        <img src = "https://dtcl.gg/item/dragons_claw.png" class = "ItemMini">
+                        
+                    </div>
+                </div>
+                
+                 <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Morgana.png" class="ChamImg" style= "border-color: rgb(32,122,199);" >
+                    </div>
+                    <div class = "Item">
+                    
+                    </div>
+                </div>
+                
+                
+                 <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Vex.png" class="ChamImg" style= "border-color: rgb(32,122,199);" >
+                    </div>
+                    <div class = "Item">
+                    </div>
+                </div>
+                
+                
+                 <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Darius.png" class="ChamImg" style= "border-color: grey">
+                    </div>
+                    <div class = "Item">
+ 
+                    </div>
+                </div>
+                
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Malzahar.png" class="ChamImg" style= "border-color: rgba(196,64,218,1.00);" >
+                    </div>
+                    <div class = "Item">
+ 
+                    </div>
+                </div>
+                
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Viktor.png" class="ChamImg" style= "border-color: rgb(255,185,59);" >
+                    </div>
+                    <div class = "Item">
+ 
+                    </div>
+                </div>
+                
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Zyra.png" class="ChamImg" style= "border-color: rgb(17,178,136);" >
+                    </div>
+                    <div class = "Item">
+ 
+                    </div>
+                </div>
+                
+            </div>
+            <div class = "HeToc">
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: rgb(255,185,59);">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/syndicate.png" class = "icon">
+                                 <div class = "Amouth">5</div>
+                            </div> 
+                        </div> 
+                    </div>     
+                </div>
+                
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: grey">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/arcanist.png" class = "icon">
+                                 <div class = "Amouth">4</div>
+                            </div> 
+                        </div> 
+                    </div>      
+                </div>
+                
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: rgb(101,66,33);">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/bodyguard.png" class = "icon">
+                                 <div class = "Amouth">2</div>
+                            </div> 
+                        </div> 
+                    </div>      
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class = "Team" style="border-color: rgb(201,89,89)">     
+            <div class = "TeamName">Irelia Nhà Phát Minh</div>
+            <div class = "AllTeam">
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Irelia.png" class="ChamImg" style= "border-color: rgba(196,64,218,1.00);" >
+                    </div>
+                    <div class = "Item">
+                        <img src ="https://dtcl.gg/item/quicksilver.png" class = "ItemMini">
+                        <img src = "https://dtcl.gg/item/giant_slayer.png" class = "ItemMini">
+                        <img src = "https://dtcl.gg/item/titans_resolve.png" class = "ItemMini">
+                    </div>
+                </div>
+                
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Seraphine.png" class="ChamImg" style= "border-color: rgba(196,64,218,1.00);" >
+                    </div>
+                    <div class = "Item">
+                        <img src ="https://dtcl.gg/item/morellonomicon.png" class = "ItemMini">
+                        <img src = "https://dtcl.gg/item/spear_of_shojin.png" class = "ItemMini">
+                        
+                    </div>
+                </div>
+                
+                 <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Jayce.png" class="ChamImg" style= "border-color: rgb(255,185,59);" >
+                    </div>
+                    <div class = "Item">
+                        <img src ="https://dtcl.gg/item/bramble_vest.png" class = "ItemMini">
+                    </div>
+                </div>
+                
+                
+                 <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Gnar.png" class="ChamImg" style= "border-color: rgb(32,122,199);" >
+                    </div>
+                    <div class = "Item">
+                    </div>
+                </div>
+                
+                
+                 <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Senna.png" class="ChamImg" style= "border-color: rgb(32,122,199);">
+                    </div>
+                    <div class = "Item">
+ 
+                    </div>
+                </div>
+                
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Ezreal.png" class="ChamImg" style= "border-color: grey" >
+                    </div>
+                    <div class = "Item">
+ 
+                    </div>
+                </div>
+                
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Ekko.png" class="ChamImg" style= "border-color: rgb(32,122,199);" >
+                    </div>
+                    <div class = "Item">
+ 
+                    </div>
+                </div>
+                
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Zilean.png" class="ChamImg" style= "border-color: rgb(17,178,136);" >
+                    </div>
+                    <div class = "Item">
+ 
+                    </div>
+                </div>
+                
+            </div>
+            <div class = "HeToc">
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: rgb(255,185,59);">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/transformer.png" class = "icon">
+                                 <div class = "Amouth">1</div>
+                            </div> 
+                        </div> 
+                    </div>     
+                </div>
+                
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: rgb(255,185,59);">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/socialite.png" class = "icon">
+                                 <div class = "Amouth">3</div>
+                            </div> 
+                        </div> 
+                    </div>      
+                </div>
+                
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: rgb(255,185,59);">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/innovator.png" class = "icon">
+                                 <div class = "Amouth">5</div>
+                            </div> 
+                        </div> 
+                    </div>      
+                </div>
+                
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: rgb(101,66,33);">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/striker.png" class = "icon">
+                                 <div class = "Amouth">2</div>
+                            </div> 
+                        </div> 
+                    </div>      
+                </div>
+                
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: rgb(101,66,33);">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/scrap.png" class = "icon">
+                                 <div class = "Amouth">3</div>
+                            </div> 
+                        </div> 
+                    </div>      
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class = "Team" style="border-color: rgb(201,89,89)">     
+            <div class = "TeamName">Sivir Công Nghệ</div>
+            <div class = "AllTeam">
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Sivir.png" class="ChamImg" style= "border-color: rgba(196,64,218,1.00);" >
+                    </div>
+                    <div class = "Item">
+                        <img src ="https://dtcl.gg/item/quicksilver.png" class = "ItemMini">
+                        <img src = "https://dtcl.gg/item/guinsoos_rageblade.png" class = "ItemMini">
+                        <img src = "https://dtcl.gg/item/statikk_shiv.png" class = "ItemMini">
+                    </div>
+                </div>
+                
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Alistar.png" class="ChamImg" style= "border-color: rgba(196,64,218,1.00);" >
+                    </div>
+                    <div class = "Item">
+                        <img src ="https://dtcl.gg/item/bramble_vest.png" class = "ItemMini">
+                        <img src = "https://dtcl.gg/item/redemption.png" class = "ItemMini">
+                        
+                    </div>
+                </div>
+                
+                 <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6b_Vi.png" class="ChamImg" style= "border-color: rgb(255,185,59);" >
+                    </div>
+                    <div class = "Item">
+                        <img src ="https://dtcl.gg/item/morellonomicon.png" class = "ItemMini">
+                    </div>
+                </div>
+                
+                
+                 <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_JarvanIV.png" class="ChamImg" style= "border-color: grey" >
+                    </div>
+                    <div class = "Item">
+                    </div>
+                </div>
+                
+                
+                 <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Sejuani.png" class="ChamImg" style= "border-color: rgb(17,178,136);">
+                    </div>
+                    <div class = "Item">
+ 
+                    </div>
+                </div>
+                
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Nocturne.png" class="ChamImg" style= "border-color: grey" >
+                    </div>
+                    <div class = "Item">
+ 
+                    </div>
+                </div>
+                
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Lucian.png" class="ChamImg" style= "border-color: rgb(32,122,199);" >
+                    </div>
+                    <div class = "Item">
+ 
+                    </div>
+                </div>
+
+            </div>
+            <div class = "HeToc">
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: rgb(255,185,59);">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/rivals.png" class = "icon">
+                                 <div class = "Amouth">1</div>
+                            </div> 
+                        </div> 
+                    </div>     
+                </div>
+                
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: rgb(255,185,59);">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/hextech.png" class = "icon">
+                                 <div class = "Amouth">6</div>
+                            </div> 
+                        </div> 
+                    </div>      
+                </div>
+                
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: rgb(101,66,33);">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/enforcer.png" class = "icon">
+                                 <div class = "Amouth">2</div>
+                            </div> 
+                        </div> 
+                    </div>      
+                </div>
+                
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: rgb(101,66,33);">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/striker.png" class = "icon">
+                                 <div class = "Amouth">2</div>
+                            </div> 
+                        </div> 
+                    </div>      
+                </div>
+                
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: rgb(101,66,33);">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/bruiser.png" class = "icon">
+                                 <div class = "Amouth">2</div>
+                            </div> 
+                        </div> 
+                    </div>      
+                </div>
+                
+            </div>
+    
+        </div>
+        
+        <div class = "Team" style="border-color: rgb(201,89,89)">     
+            <div class = "TeamName">Ahri Băng Đảng</div>
+            <div class = "AllTeam">
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Ahri.png" class="ChamImg" style= "border-color: rgba(196,64,218,1.00);" >
+                    </div>
+                    <div class = "Item">
+                        <img src ="https://dtcl.gg/item/blue_buff.png" class = "ItemMini">
+                        <img src = "https://dtcl.gg/item/infinity_edge.png" class = "ItemMini">
+                        <img src = "https://dtcl.gg/item/jeweled_guantlet.png" class = "ItemMini">
+                    </div>
+                </div>
+                
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Braum.png" class="ChamImg" style= "border-color: rgba(196,64,218,1.00);" >
+                    </div>
+                    <div class = "Item">
+                        <img src ="https://dtcl.gg/item/bramble_vest.png" class = "ItemMini">
+                        <img src = "https://dtcl.gg/item/redemption.png" class = "ItemMini">
+                        <img src = "https://dtcl.gg/item/dragons_claw.png" class = "ItemMini">
+                    </div>
+                </div>
+                
+                 <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Darius.png" class="ChamImg" style= "border-color: grey" >
+                    </div>
+                    <div class = "Item">
+                        <img src ="https://dtcl.gg/item/morellonomicon.png" class = "ItemMini">
+                    </div>
+                </div>
+                
+                
+                 <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Morgana.png" class="ChamImg" style= "border-color: rgb(32,122,199);">
+                    </div>
+                    <div class = "Item">
+                    </div>
+                </div>
+                
+                
+                 <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Zyra.png" class="ChamImg" style= "border-color: rgb(17,178,136);">
+                    </div>
+                    <div class = "Item">
+ 
+                    </div>
+                </div>
+                
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Viktor.png" class="ChamImg" style= "border-color: rgb(255,185,59);" >
+                    </div>
+                    <div class = "Item">
+ 
+                    </div>
+                </div>
+                
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Silco.png" class="ChamImg" style= "border-color: rgb(255,185,59);" >
+                    </div>
+                    <div class = "Item">
+ 
+                    </div>
+                </div>
+
+            </div>
+            <div class = "HeToc">
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: rgb(255,185,59);">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/mastermind.png" class = "icon">
+                                 <div class = "Amouth">1</div>
+                            </div> 
+                        </div> 
+                    </div>     
+                </div>
+                
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: rgb(255,185,59);">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/syndicate.png" class = "icon">
+                                 <div class = "Amouth">5</div>
+                            </div> 
+                        </div> 
+                    </div>      
+                </div>
+                
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: rgb(101,66,33);">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/scholar.png" class = "icon">
+                                 <div class = "Amouth">2</div>
+                            </div> 
+                        </div> 
+                    </div>      
+                </div>
+                
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: rgb(101,66,33);">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/bodyguard.png" class = "icon">
+                                 <div class = "Amouth">2</div>
+                            </div> 
+                        </div> 
+                    </div>      
+                </div>
+                
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: rgb(101,66,33);">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/arcanist.png" class = "icon">
+                                 <div class = "Amouth">2</div>
+                            </div> 
+                        </div> 
+                    </div>      
+                </div>
+                
+            </div>
+       
+        </div>
+        
+        <div class = "Team" style="border-color: rgb(201,89,89)">     
+            <div class = "TeamName">Ahri Băng Đảng</div>
+            <div class = "AllTeam">
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Ahri.png" class="ChamImg" style= "border-color: rgba(196,64,218,1.00);" >
+                    </div>
+                    <div class = "Item">
+                        <img src ="https://dtcl.gg/item/blue_buff.png" class = "ItemMini">
+                        <img src = "https://dtcl.gg/item/infinity_edge.png" class = "ItemMini">
+                        <img src = "https://dtcl.gg/item/jeweled_guantlet.png" class = "ItemMini">
+                    </div>
+                </div>
+                
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Braum.png" class="ChamImg" style= "border-color: rgba(196,64,218,1.00);" >
+                    </div>
+                    <div class = "Item">
+                        <img src ="https://dtcl.gg/item/bramble_vest.png" class = "ItemMini">
+                        <img src = "https://dtcl.gg/item/redemption.png" class = "ItemMini">
+                        <img src = "https://dtcl.gg/item/dragons_claw.png" class = "ItemMini">
+                    </div>
+                </div>
+                
+                 <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Darius.png" class="ChamImg" style= "border-color: grey" >
+                    </div>
+                    <div class = "Item">
+                        <img src ="https://dtcl.gg/item/morellonomicon.png" class = "ItemMini">
+                    </div>
+                </div>
+                
+                
+                 <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Morgana.png" class="ChamImg" style= "border-color: rgb(32,122,199);">
+                    </div>
+                    <div class = "Item">
+                    </div>
+                </div>
+                
+                
+                 <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Zyra.png" class="ChamImg" style= "border-color: rgb(17,178,136);">
+                    </div>
+                    <div class = "Item">
+ 
+                    </div>
+                </div>
+                
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Viktor.png" class="ChamImg" style= "border-color: rgb(255,185,59);" >
+                    </div>
+                    <div class = "Item">
+ 
+                    </div>
+                </div>
+                
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Silco.png" class="ChamImg" style= "border-color: rgb(255,185,59);" >
+                    </div>
+                    <div class = "Item">
+ 
+                    </div>
+                </div>
+
+            </div>
+            <div class = "HeToc">
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: rgb(255,185,59);">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/mastermind.png" class = "icon">
+                                 <div class = "Amouth">1</div>
+                            </div> 
+                        </div> 
+                    </div>     
+                </div>
+                
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: rgb(255,185,59);">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/syndicate.png" class = "icon">
+                                 <div class = "Amouth">5</div>
+                            </div> 
+                        </div> 
+                    </div>      
+                </div>
+                
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: rgb(101,66,33);">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/scholar.png" class = "icon">
+                                 <div class = "Amouth">2</div>
+                            </div> 
+                        </div> 
+                    </div>      
+                </div>
+                
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: rgb(101,66,33);">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/bodyguard.png" class = "icon">
+                                 <div class = "Amouth">2</div>
+                            </div> 
+                        </div> 
+                    </div>      
+                </div>
+                
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: rgb(101,66,33);">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/arcanist.png" class = "icon">
+                                 <div class = "Amouth">2</div>
+                            </div> 
+                        </div> 
+                    </div>      
+                </div>
+                
+            </div>
+           
+        </div>
+        
+        <div class = "Team" style="border-color: green">     
+            <div class = "TeamName">Irelia Thần tượng</div>
+            <div class = "AllTeam">
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Irelia.png" class="ChamImg" style= "border-color: rgba(196,64,218,1.00);" >
+                    </div>
+                    <div class = "Item">
+                        <img src ="https://dtcl.gg/item/last_whisper.png" class = "ItemMini">
+                        <img src = "https://dtcl.gg/item/infinity_edge.png" class = "ItemMini">
+                        <img src = "https://dtcl.gg/item/quicksilver.png" class = "ItemMini">
+                    </div>
+                </div>
+                
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Gnar.png" class="ChamImg" style= "border-color: rgb(32,122,199);" >
+                    </div>
+                    <div class = "Item">
+                        <img src ="https://dtcl.gg/item/bramble_vest.png" class = "ItemMini">
+                        <img src = "https://dtcl.gg/item/dragons_claw.png" class = "ItemMini">
+                    </div>
+                </div>
+                
+                 <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Seraphine.png" class="ChamImg" style= "border-color: rgba(196,64,218,1.00);" >
+                    </div>
+                    <div class = "Item">
+                        <img src ="https://dtcl.gg/item/morellonomicon.png" class = "ItemMini">
+                    </div>
+                </div>
+                
+                
+                 <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_JarvanIV.png" class="ChamImg" style= "border-color: grey">
+                    </div>
+                    <div class = "Item">
+                    </div>
+                </div>
+                
+                
+                 <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Morgana.png" class="ChamImg" style= "border-color: rgb(32,122,199);">
+                    </div>
+                    <div class = "Item">
+ 
+                    </div>
+                </div>
+                
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Sivir.png" class="ChamImg" style= "border-color: rgba(196,64,218,1.00)  ;" >
+                    </div>
+                    <div class = "Item">
+ 
+                    </div>
+                </div>
+                
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Senna.png" class="ChamImg" style= "border-color: rgb(32,122,199);" >
+                    </div>
+                    <div class = "Item">
+ 
+                    </div>
+                </div>
+
+                 <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Orianna.png" class="ChamImg" style= "border-color: rgba(196,64,218,1.00);" >
+                    </div>
+                    <div class = "Item">
+ 
+                    </div>
+                </div>
+                
+            </div>
+            <div class = "HeToc">
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: rgb(255,185,59);">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/socialite.png" class = "icon">
+                                 <div class = "Amouth">3</div>
+                            </div> 
+                        </div> 
+                    </div>     
+                </div>
+                
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: rgb(255,185,59);">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/striker.png" class = "icon">
+                                 <div class = "Amouth">4</div>
+                            </div> 
+                        </div> 
+                    </div>      
+                </div>
+                
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: grey"
+">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/enchanter.png" class = "icon">
+                                 <div class = "Amouth">3</div>
+                            </div> 
+                        </div> 
+                    </div>      
+                </div>
+                
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: rgb(101,66,33);">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/hextech.png" class = "icon">
+                                 <div class = "Amouth">2</div>
+                            </div> 
+                        </div> 
+                    </div>      
+                </div>
+                
+            </div>
+       
+        </div>
+        
+        <div class = "Team" style="border-color: green">     
+            <div class = "TeamName">Warwick Carry</div>
+            <div class = "AllTeam">
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Warwick.png" class="ChamImg" style= "border-color: green" >
+                    </div>
+                    <div class = "Item">
+                        <img src ="https://dtcl.gg/item/guinsoos_rageblade.png" class = "ItemMini">
+                        <img src = "https://dtcl.gg/item/titans_resolve.png" class = "ItemMini">
+                        <img src = "https://dtcl.gg/item/quicksilver.png" class = "ItemMini">
+                    </div>
+                </div>
+                
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Quinn.png" class="ChamImg" style= "border-color:green" >
+                    </div>
+                    <div class = "Item">
+                        
+                    </div>
+                </div>
+                
+                 <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Renata.png" class="ChamImg" style= "border-color: rgba(196,64,218,1.00);" >
+                    </div>
+                    <div class = "Item">
+                        <img src ="https://dtcl.gg/item/morellonomicon.png" class = "ItemMini">
+                    </div>
+                </div>
+                
+                
+                 <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Tryndamere.png" class="ChamImg" style= "border-color:  rgb(32,122,199);">
+                    </div>
+                    <div class = "Item">
+                    </div>
+                </div>
+                
+                
+                 <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Zac.png" class="ChamImg" style= "border-color: rgb(32,122,199);">
+                    </div>
+                    <div class = "Item">
+ 
+                    </div>
+                </div>
+                
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Kaisa.png" class="ChamImg" style= "border-color: gold" >
+                    </div>
+                    <div class = "Item">
+ 
+                    </div>
+                </div>
+                
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Viktor.png" class="ChamImg" style= "border-color: gold;" >
+                    </div>
+                    <div class = "Item">
+ 
+                    </div>
+                </div>
+
+            </div>
+            <div class = "HeToc">
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: grey">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/challenger.png" class = "icon">
+                                 <div class = "Amouth">4</div>
+                            </div> 
+                        </div> 
+                    </div>     
+                </div>
+                
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: grey">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/chemtech.png" class = "icon">
+                                 <div class = "Amouth">5</div>
+                            </div> 
+                        </div> 
+                    </div>      
+                </div>
+                
+            </div>
+      
+        </div>
+        
+        <div class = "Team" style="border-color: green">     
+            <div class = "TeamName">Renata Đấu Sĩ</div>
+            <div class = "AllTeam">
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Renata.png" class="ChamImg" style= "border-color:rgba(196,64,218,1.00); " >
+                    </div>
+                    <div class = "Item">
+                        <img src ="https://dtcl.gg/item/blue_buff.png" class = "ItemMini">
+                        <img src = "https://dtcl.gg/item/hextech_gunblade.png" class = "ItemMini">
+                        <img src = "https://dtcl.gg/item/morellonomicon.png" class = "ItemMini">
+                    </div>
+                </div>
+                
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6b_Vi.png" class="ChamImg" style= "border-color:rgba(196,64,218,1.00);" >
+                    </div>
+                    <div class = "Item">
+                        <img src = "https://dtcl.gg/item/bramble_vest.png" class = "ItemMini">
+                        <img src = "https://dtcl.gg/item/dragons_claw.png" class = "ItemMini">
+                        <img src = "https://dtcl.gg/item/redemption.png" class = "ItemMini">
+                    </div>
+                </div>
+                
+                 <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Viktor.png" class="ChamImg" style= "border-color: gold" >
+                    </div>
+                    <div class = "Item">
+                        <img src ="https://dtcl.gg/item/rabadons_deathcap.png" class = "ItemMini">
+                        <img src ="https://dtcl.gg/item/spear_of_shojin.png" class = "ItemMini">
+                    </div>
+                </div>
+                
+                
+                 <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Sejuani.png" class="ChamImg" style= "border-color:  green">
+                    </div>
+                    <div class = "Item">
+                    </div>
+                </div>
+                
+                
+                 <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_TahmKench.png" class="ChamImg" style= "border-color: gold">
+                    </div>
+                    <div class = "Item">
+ 
+                    </div>
+                </div>
+                
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Zac.png" class="ChamImg" style= "border-color: rgb(32,122,199)" >
+                    </div>
+                    <div class = "Item">
+ 
+                    </div>
+                </div>
+                
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Silco.png" class="ChamImg" style= "border-color: gold;" >
+                    </div>
+                    <div class = "Item">
+                         
+                    </div>
+                </div>
+
+            </div>
+            <div class = "HeToc">
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: gold">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/glutton.png" class = "icon">
+                                 <div class = "Amouth">1</div>
+                            </div> 
+                        </div> 
+                    </div>     
+                </div>
+                
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: gold">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/rivals.png" class = "icon">
+                                 <div class = "Amouth">1</div>
+                            </div> 
+                        </div> 
+                    </div>      
+                </div>
+                
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: gold">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/mastermind.png" class = "icon">
+                                 <div class = "Amouth">1</div>
+                            </div> 
+                        </div> 
+                    </div>      
+                </div>
+                
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: rgb(101,66,33)">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/enforcer.png" class = "icon">
+                                 <div class = "Amouth">2</div>
+                            </div> 
+                        </div> 
+                    </div>      
+                </div>
+                
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: grey">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/bruiser.png" class = "icon">
+                                 <div class = "Amouth">4</div>
+                            </div> 
+                        </div> 
+                    </div>      
+                </div>
+                
+                 <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: rgb(101,66,33)">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/scholar.png" class = "icon">
+                                 <div class = "Amouth">2</div>
+                            </div> 
+                        </div> 
+                    </div>      
+                </div>
+                
+                 <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: rgb(101,66,33)">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/chemtech.png" class = "icon">
+                                 <div class = "Amouth">3</div>
+                            </div> 
+                        </div> 
+                    </div>      
+                </div>
+                
+            </div>
+    
+        </div>
+        
+        <div class = "Team" style="border-color: green">     
+            <div class = "TeamName">Liên Xạ Đấu Sĩ</div>
+            <div class = "AllTeam">
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Jinx.png" class="ChamImg" style= "border-color: gold " >
+                    </div>
+                    <div class = "Item">
+                       
+                    </div>
+                </div>
+                
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Gangplank.png" class="ChamImg" style= "border-color:rgb(32,122,199);" >
+                    </div>
+                    <div class = "Item">
+                        <img src = "https://dtcl.gg/item/infinity_edge.png" class = "ItemMini">
+                        <img src = "https://dtcl.gg/item/last_whisper.png" class = "ItemMini">
+                        <img src = "https://dtcl.gg/item/bloodthirster.png" class = "ItemMini">
+                    </div>
+                </div>
+                
+                 <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Lucian.png" class="ChamImg" style= "border-color: rgb(32,122,199);" >
+                    </div>
+                    <div class = "Item">
+                        <img src ="https://dtcl.gg/item/blue_buff.png" class = "ItemMini">
+                        <img src ="https://dtcl.gg/item/morellonomicon.png" class = "ItemMini">
+                         <img src ="https://dtcl.gg/item/giant_slayer.png" class = "ItemMini">
+                    </div>
+                </div>
+                
+                
+                 <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Sejuani.png" class="ChamImg" style= "border-color:  green">
+                    </div>
+                    <div class = "Item">
+                    </div>
+                </div>
+                
+                
+                 <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6b_Vi.png" class="ChamImg" style= "border-color: rgba(196,64,218,1.00);">
+                    </div>
+                    <div class = "Item">
+                     <img src ="Material/dragons_claw.png" class = "ItemMini">
+                         <img src ="https://dtcl.gg/item/bramble_vest.png" class = "ItemMini">
+                    </div>
+                </div>
+                
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Zac.png" class="ChamImg" style= "border-color: rgb(32,122,199)" >
+                    </div>
+                    <div class = "Item">
+ 
+                    </div>
+                </div>
+                
+                <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_Corki.png" class="ChamImg" style= "border-color: green;" >
+                    </div>
+                    <div class = "Item">
+                         
+                    </div>
+                </div>
+
+                 <div class = "ChamWithItem">
+                    <div class = "Star" >★★</div>
+                    <div class = "Champion"> 
+                        <img src = "https://dtcl.gg/champions/TFT6_RekSai.png" class="ChamImg" style= "border-color: green;" >
+                    </div>
+                    <div class = "Item">
+                         
+                    </div>
+                </div>
+                
+            </div>
+            <div class = "HeToc">
+               
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: rgb(101,66,33)">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/enforcer.png" class = "icon">
+                                 <div class = "Amouth">2</div>
+                            </div> 
+                        </div> 
+                    </div>      
+                </div>
+                
+                <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: grey">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/bruiser.png" class = "icon">
+                                 <div class = "Amouth">4</div>
+                            </div> 
+                        </div> 
+                    </div>      
+                </div>
+                
+                 <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: gold">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/twinshot.png" class = "icon">
+                                 <div class = "Amouth">4</div>
+                            </div> 
+                        </div> 
+                    </div>      
+                </div>
+                
+                 <div class = "He">
+                    <div class = "HeElement" >
+                        <div class = "hexagon" style="background-color: rgb(101,66,33)">
+                            <div class = "HeIcon" >
+                                <img src = "https://rerollcdn.com/icons/hextech.png" class = "icon">
+                                 <div class = "Amouth">2</div>
+                            </div> 
+                        </div> 
+                    </div>      
+                </div>
+                
+            </div>
+    
+        </div>
+        
+        
+    </div>
+    
+    
+    
+    </div>
+</body>
+</html>
+{% endblock %}
